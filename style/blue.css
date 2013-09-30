@@ -1,0 +1,141 @@
+/* Blue */
+
+a{
+	color: #646469;
+}
+
+a:hover{
+	color: #11608f;
+}
+
+blockquote{
+	border-left: 4px solid #646469;
+}
+
+.color{
+	color: #646469;	
+}
+
+header{
+	border-top: 2px solid #646469;
+}
+
+.navbar .btn{
+background:#646469 !important;  
+}
+
+.navbar .btn:hover{
+background:#C2002F !important;
+}
+
+.da-slider{
+	border-top: 3px solid #646469;
+	border-bottom: 3px solid #646469;
+}
+
+.da-slide h2 span{
+	background: url("../img/border-b.png") left bottom no-repeat;
+}
+
+.da-slide .da-link{
+	background: #646469;
+}	
+
+.da-slide .da-link:hover{
+	background: #C2002F;
+}
+
+.da-dots span{
+	background: #646469;
+}
+
+.da-arrows span{
+	background: #646469;
+}
+
+.full-slider{
+	border-top: 5px solid #11608f;
+	background: #646469;
+}
+
+.full-slider .button a{
+	background: #11608f;
+}
+
+.full-slider .button a:hover{
+	background: #C2002F;
+}	
+
+.flex-back{
+	background: #11608f;	
+}
+
+.home-product{
+	background: #C2002F;
+}
+
+.home-product h1, h2, h3, h4, h5{
+	color: #333;
+}
+
+.home-product p{text-align:justify;}
+
+
+#portfolio .element{
+	background: #c2002f;
+}
+
+#portfolio .pcap{
+	background:#646469;
+	border-top: 2px solid #fff;
+}
+
+/* Events - Accordion*/
+
+.events .accordion-heading h5{
+background:#646469;
+}
+
+.social-links{
+	background: #C2002F;	
+}
+
+.social-links i{
+	background: #646469;
+}
+
+.formy{
+	background: #646469;
+}
+
+.service-two i{
+	color: #646469;	
+}
+
+.features-two .feat i, .features-three i{
+	color: #646469;
+}
+
+.about-two .asocial i{
+	background:#646469;
+}
+
+.career .nav-tabs > li > a:hover{
+	background: #646469;
+}
+
+.button a{
+	background: #646469;
+}
+
+.button a:hover{
+	background: #11608f;
+}	
+
+.paging a:hover{
+	background: #646469;
+}
+
+.paging .current{
+	background: #11608f;
+}
