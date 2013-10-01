@@ -1,19 +1,4 @@
 
-<!-- Header Starts -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="span6">
-        <div class="logo">
-          <h1><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png"></h1>
-          <div class="hmeta"></div>
-        </div>
-      </div>
-      <div class="span12"><h3>PANEL DE ADMINISTRACIÓN</h3></div>
-    </div>
-  </div>
-</header>
-
 <!-- Navigation bar starts -->
           <div class="navbar">
            <div class="navbar-inner">
@@ -49,4 +34,3 @@
            </div>
          </div>
 
-<!-- Navigation bar ends -->

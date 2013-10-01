@@ -3,7 +3,8 @@
 /* @var $model Productos */
 /* @var $form CActiveForm */
 ?>
-<div class="edit-form">
+
+<div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'productos-form',
@@ -13,51 +14,61 @@
 )); ?>
 
 
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
 	<?php echo $form->errorSummary($model); ?>
 
+<br>
+		<?php echo $form->labelEx($model,'sublinea_id'); ?>
+		<?php echo $form->textField($model,'sublinea_id'); ?>
+		<?php echo $form->error($model,'sublinea_id'); ?>
+
+	
+		<?php echo $form->labelEx($model,'unidad_id'); ?>
+	    <?php  echo $form->dropDownList($model,'unidad_id', CHtml::listData(Unidades::model()->findAll(), 'id', 'descripcion'), array('empty'=>'Seleccion'));  ?>
+		<?php echo $form->error($model,'unidad_id'); ?>
+<br>
 		<?php echo $form->labelEx($model,'clave'); ?>
 		<?php echo $form->textField($model,'clave',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'clave'); ?>
 
-		<?php echo $form->labelEx($model,'linea_id'); ?>
-	    <?php  echo $form->dropDownList($model,'linea_id', CHtml::listData(Lineas::model()->findAll(), 'id', 'descripcion'), array('empty'=>'Seleccion'));  ?>
-		<?php echo $form->error($model,'linea_id'); ?>
+<br>
+		<?php echo $form->labelEx($model,'descripcion_producto'); ?>
+		<?php echo $form->textField($model,'descripcion_producto',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'descripcion_producto'); ?>
 
-		<?php echo $form->labelEx($model,'unidad_id'); ?>
-	    <?php  echo $form->dropDownList($model,'unidad_id', CHtml::listData(Unidades::model()->findAll(), 'id', 'descripcion'), array('empty'=>'Seleccion'));  ?>
-		<?php echo $form->error($model,'unidad_id'); ?>
+<br>
+		<?php echo $form->labelEx($model,'producto'); ?>
+		<?php echo $form->textField($model,'producto',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'producto'); ?>
 
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
+<br>
+		<?php echo $form->labelEx($model,'ficha_tecnica'); ?>
+		<?php echo $form->textArea($model,'ficha_tecnica',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'ficha_tecnica'); ?>
 
-		<?php echo $form->labelEx($model,'detalles'); ?>
-		<?php echo $form->textField($model,'detalles',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'detalles'); ?>
+<br>
+		<?php echo $form->labelEx($model,'imagen'); ?>
+		<?php echo $form->fileField($model,'imagen',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'imagen'); ?>
 
-		<?php echo $form->labelEx($model,'vistos'); ?>
-		<?php echo $form->textField($model,'vistos'); ?>
-		<?php echo $form->error($model,'vistos'); ?>
-
-		<?php if(isset($model->imagen)){
+        <?php if(isset($model->imagen)){
          echo '<div>Imagen Actual <img src="'.Yii::app()->request->baseUrl.'/PrinprodImages/'.$model->imagen.'"   heigth="100"  width="100" /></div><label>Actualizar Imagen</label>';
-         ?>
+        ?>
 
 	    <?php	}else{ 
               echo $form->labelEx($model,'imagen');
 	    }?>
-	   
-		<?php echo $form->fileField($model, 'imagen'); ?>
-		<?php echo $form->error($model,'imagen'); ?>
+<br>
+		<?php echo $form->labelEx($model,'vistos'); ?>
+		<?php echo $form->textField($model,'vistos'); ?>
+		<?php echo $form->error($model,'vistos'); ?>
 
-		
-
-
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn')); ?>
-	</div>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 
 <?php $this->endWidget(); ?>
 
-</div>
+</div><!-- form -->
+
+
+
