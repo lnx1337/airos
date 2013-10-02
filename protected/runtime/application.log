@@ -5798,3 +5798,63 @@ Stack trace:
 #29 {main}
 REQUEST_URI=/airos/index.php/productos/update/207
 ---
+2013/10/02 18:22:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soriadb.tbl_contacto_has' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_contacto_has`.
+in /Applications/XAMPP/xamppfiles/htdocs/airos/index.php (13)
+2013/10/02 18:25:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'soriadb.tbl_productos_has_tbl_contactos' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_productos_has_tbl_contactos`.
+in /Applications/XAMPP/xamppfiles/htdocs/airos/index.php (13)
+2013/10/02 18:39:09 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "_form".' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php:879
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/airos/protected/views/Contacto/create.php(18): CController->renderPartial('_form', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(127): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(783): CController->renderPartial('//Contacto/crea...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/airos/protected/controllers/SiteController.php(72): CController->render('//Contacto/crea...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/actions/CInlineAction.php(50): SiteController->actionContacto()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(283): CController->run('contacto')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contacto')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/airos/index.php/site/contacto
+---
+2013/10/02 19:09:29 [error] [exception.CException] exception 'CException' with message 'ContactoController cannot find the requested view "Site/Contacto".' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php:879
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(783): CController->renderPartial('Site/Contacto', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/airos/protected/controllers/ContactoController.php(79): CController->render('Site/Contacto', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/actions/CInlineAction.php(50): ContactoController->actionCreate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(292): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(283): CController->run('create')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('Contacto/create')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/airos/index.php/Contacto/create
+HTTP_REFERER=http://10.0.1.62/airos/index.php/site/contacto
+---
+2013/10/02 19:14:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "slider".' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('slider')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/airos/index.php/slider
+---
+2013/10/02 19:29:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "slider".' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('slider')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/airos/index.php/slider
+---

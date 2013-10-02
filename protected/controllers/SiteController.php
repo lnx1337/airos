@@ -63,8 +63,17 @@ class SiteController extends Controller
 	}
 
 	public function actionContacto(){
+      $model=new Contacto;
 
-		$this->render("contacto");
+		if(isset($_POST['Contacto']))
+		{
+			$model->attributes=$_POST['Contacto'];
+			if($model->save())
+				$this->redirect(array('contacto?sk=1'));
+		}
+      
+      $this->render('//Contacto/create',array('model'=>$model));
+
 	}
 
 	/**
@@ -106,6 +115,9 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+
+
+	
 
 	/**
 	 * Displays the login page

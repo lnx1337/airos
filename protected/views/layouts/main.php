@@ -33,11 +33,12 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <!--este slider será administrable y aparecerán productos random (Maximo 5 elementos)-->
 <div id="slider">
 <ul class="slideshow">
-<li><a href=""><img src="http://placehold.it/960x600/" width="960" height="600" /></a></li>
-<li><a href=""><img src="http://placehold.it/960x600/" width="960" height="600" /></a></li>
-<li><a href=""><img src="http://placehold.it/960x600/" width="960" height="600" /></a></li>
-<li><a href=""><img src="http://placehold.it/960x600/" width="960" height="600" /></a></li>
-<li><a href=""><img src="http://placehold.it/960x600/" width="960" height="600" /></a></li>
+<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider1.jpg" width="960" height="600" /></a></li>
+<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider2.jpg" width="960" height="600" /></a></li>
+<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider3.jpg" width="960" height="600" /></a></li>
+<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider4.jpg" width="960" height="600" /></a></li>
+
+
 </ul>
 </div>
 
@@ -103,7 +104,7 @@ foreach ($lista as $key => $valueLineas) {
      echo "</ul></li>";		
 
 
-   if($i>=10){
+   if($i>=9){
    	break;
    } 
 

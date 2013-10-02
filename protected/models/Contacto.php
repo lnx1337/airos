@@ -9,6 +9,10 @@
  * @property string $email
  * @property string $telefono
  * @property string $comentarios
+ * @property string $otros
+ *
+ * The followings are the available model relations:
+ * @property TblProductos[] $tblProductoses
  */
 class Contacto extends CActiveRecord
 {
@@ -38,11 +42,11 @@ class Contacto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, comentarios', 'required'),
-			array('nombre, email, telefono, comentarios', 'length', 'max'=>45),
+			array('nombre, comentarios, otros', 'required'),
+			array('nombre, email, telefono', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nombre, email, telefono, comentarios', 'safe', 'on'=>'search'),
+			array('id, nombre, email, telefono, comentarios, otros', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +58,7 @@ class Contacto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'Productos' => array(self::MANY_MANY, 'Productos', 'tbl_productos_has_tbl_contacto(contacto_id, producto_id)'),
 		);
 	}
 
@@ -68,6 +73,7 @@ class Contacto extends CActiveRecord
 			'email' => 'Email',
 			'telefono' => 'Telefono',
 			'comentarios' => 'Comentarios',
+			'otros' => 'Otros',
 		);
 	}
 
@@ -87,6 +93,7 @@ class Contacto extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('telefono',$this->telefono,true);
 		$criteria->compare('comentarios',$this->comentarios,true);
+		$criteria->compare('otros',$this->otros,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
