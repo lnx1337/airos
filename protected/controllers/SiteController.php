@@ -37,10 +37,6 @@ class SiteController extends Controller
 		$modelProductos= Productos::model()->findAll(array('order'=>' RAND()','limit'=>5));
 		$this->render('index',array('modelProductos'=>$modelProductos,'modelContenido'=>$modelContenido,'modelNuevos'=>$modelNuevos)); 
       */
-
-
-
-
      
 		$dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'RAND()','limit'=>12)));
 
@@ -64,6 +60,7 @@ class SiteController extends Controller
 
 	public function actionContacto(){
       $model=new Contacto;
+      $modelProductos=Productos::model()->findAll();
 
 		if(isset($_POST['Contacto']))
 		{
@@ -72,7 +69,7 @@ class SiteController extends Controller
 				$this->redirect(array('contacto?sk=1'));
 		}
       
-      $this->render('//Contacto/create',array('model'=>$model));
+      $this->render('//Contacto/create',array('model'=>$model,'modelProductos'=>$modelProductos));
 
 	}
 

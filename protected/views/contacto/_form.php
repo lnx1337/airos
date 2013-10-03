@@ -39,14 +39,21 @@
 		<?php echo $form->error($model,'comentarios'); ?>
 	</div>
 
+
+
      <span class="campo">
 		<label class="sel">Me interesa recibir información de:</label>
 		<select id="select3" multiple="multiple" class="fancy">
-		  <option value="0">-- Puedes elegir varios --</option>
-		  <option value="1">Producto 1</option>
-		  <option value="2">Producto 2</option>
-		  <option value="3">Producto 3</option>
-		  <option value="4">Otro(s) Producto(s)</option>
+
+			<?php 
+
+			foreach ($modelProductos as $key => $value) { ?>
+		
+               <option value="<?php echo $value->id;  ?>"><?php echo $value->descripcion; ?></option>
+
+
+		    <?php	}	?>
+		 
 		  </select>
     </span>
 
