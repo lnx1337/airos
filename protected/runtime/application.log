@@ -5858,3 +5858,27 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/airos/index.php/slider
 ---
+2013/10/03 04:56:54 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Applications/XAMPP/xamppfiles/htdocs/airos/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(148): CListView->init()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/airos/protected/views/site/index.php(8): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(127): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/airos/protected/controllers/SiteController.php(50): CController->render('index', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(283): CController->run('')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/airos/index.php
+---
