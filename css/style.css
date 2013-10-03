@@ -7,7 +7,17 @@
 /*---------------------------------
 	IMPORTS
 -----------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+@font-face {
+    font-family: 'coolveticaregular', 'Helvetica Neue', Helvetica sans-serif;
+    src: url('fonts/coolvetica/coolvetica_rg-webfont.eot');
+    src: url('fonts/coolvetica/coolvetica_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.woff') format('woff'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.ttf') format('truetype'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.svg#coolveticaregular') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+
+}
 
 /*---------------------------------
 	OVERRIDES
@@ -16,13 +26,13 @@
 html{margin: 0px; padding: 0px; float: none;}
 
 h1,h2,h3,h4,h5,h6{
-font-family: "Helvetica Neue", arial, verdana, sans-serif;
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:lighter;
 }
 
 thead th,
 tbody th{
-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: "coolveticaregular", "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 button,
@@ -30,7 +40,7 @@ a.btn,
 input[type="submit"],
 input[type="reset"],
 input[type="button"]{
-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 
@@ -53,7 +63,7 @@ a:hover.gris{color: #fff;}
 a:hover.blanco{color: #333;}
 
 .menu{
-font-family: "Helvetica Neue", arial, verdana, sans-serif;
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: lighter;
 }
 
@@ -70,7 +80,8 @@ margin:0;
 padding:0 0 0 0;
 color:#000;
 background:#efefef url(/soria/css/img/gray_jean.png);
-font:lighter 0.9em/150% "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; ;
+font:lighter 0.9em/150% 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+letter-spacing: 0.02em;
 text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
 }
 
@@ -121,6 +132,7 @@ width: 100%;
 background:#000;
 color:#fff;
 z-index:1000;
+
 }
 
 	.navbar #logo{
@@ -249,13 +261,17 @@ top: 0;}
 
 .fixed{}
 
-.datos{background-color: #646569;
+.datos{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-weight: lighter;
+background-color: #646569;
 color: #fff;
 font-size: 2em;
 padding: 0.2em 0.5em;
 width: 100%;
 display: inline-block;
-text-align: center;}
+text-align: center;
+}
 
 .telefono{float: left; display: inline-block; width:40%;line-height: 1.5; margin: 0px;}
 
@@ -267,9 +283,10 @@ text-align: center;}
 nav.categorias{}
 
 .menu-soria{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 background-color: #d1d4da;
 color: #fff;
-font-size: 2em;
+font-size: 1.5em;
 padding: 0.5em;
 width: 100%;
 text-align: center;
@@ -310,27 +327,36 @@ margin: 0px auto;}
 
 ul.productos-random li{}
 
-.item{float: left; background-color: #C61C35;}
+.item{ float: left;
+background-color: #C61C35;
+max-height: 355px;
+height: 355px;
+overflow: hidden;}
 
 .foto-producto{text-align: center;
 margin: 0px auto;
 padding: 0px 4px 0px 4px;
 display: inline-table;
-width: 100%;}
+width: 100%;
+max-height: 180px!important;
+padding-bottom: inherit;}
 
 .foto-producto img{width: 100%;
 max-width: 100%;
-height: auto;
+max-height: 180px;
+height: 180px;
 margin: auto;
 display: inline-block;}
+
+.footer-producto{font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
 
 small.footer-producto{display: inline-block;
 width: 100%;
 padding: 0px 1em;}
 
-small.footer-producto h5{color: #fff;}
+small.footer-producto h5{color: #fff; font-size: 0.9em;}
 
-small.footer-producto h6{color:#fff; margin: 0px;}
+small.footer-producto h6{color:#fff; margin: 0px; font-size: 1.1em; margin-top: 3px;}
 
 small.footer-producto p{color: #fff;
 max-height: 100px;
@@ -431,8 +457,9 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 
 .container-nav {
     text-align: center;
-display: inline-block;
+display: block;
 width: 100%;
+height: 40px;
 background-color: #646569;
 }
 .toggleMenu {
@@ -447,7 +474,9 @@ ul.nav-li{display: inline-table; margin: 0px auto;}
     list-style: none;
      *zoom: 1;
      background:#646569;
-     margin: 0 2.5%;
+     display: inline-block;
+     float: left;
+ 
      text-align: center;
 }
 .nav-li:before,
