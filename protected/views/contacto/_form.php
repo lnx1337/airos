@@ -43,13 +43,13 @@
 
      <span class="campo">
 		<label class="sel">Me interesa recibir información de:</label>
-		<select id="select3" multiple="multiple" class="fancy">
+		<select id="select3" multiple="multiple" class="fancy" name="Productos[]">
 
 			<?php 
 
 			foreach ($modelProductos as $key => $value) { ?>
 		
-               <option value="<?php echo $value->id;  ?>"><?php echo $value->descripcion; ?></option>
+               <option value="<?php echo $value->id;  ?>"><?php echo $value->descripcion_producto; ?></option>
 
 
 		    <?php	}	?>
