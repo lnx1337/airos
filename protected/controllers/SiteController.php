@@ -37,10 +37,6 @@ class SiteController extends Controller
 		$modelProductos= Productos::model()->findAll(array('order'=>' RAND()','limit'=>5));
 		$this->render('index',array('modelProductos'=>$modelProductos,'modelContenido'=>$modelContenido,'modelNuevos'=>$modelNuevos)); 
       */
-
-
-
-
      
 		$dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'RAND()','limit'=>12)));
 
@@ -64,15 +60,30 @@ class SiteController extends Controller
 
 	public function actionContacto(){
       $model=new Contacto;
+      $modelProductos=Productos::model()->findAll(array('order'=>'descripcion_producto'));
+
+
+       
 
 		if(isset($_POST['Contacto']))
 		{
 			$model->attributes=$_POST['Contacto'];
-			if($model->save())
+			
+			if($model->save()){
+                
+                foreach ($_POST['Productos'] as $key => $value) {
+                    $modelProductosHasTblContacto=new ProductosHasTblContacto;
+                    $modelProductosHasTblContacto->contacto_id=$model->id;
+                    $modelProductosHasTblContacto->producto_id=$value;
+                    $modelProductosHasTblContacto->save();
+                }
 				$this->redirect(array('contacto?sk=1'));
+
+			}	
+
 		}
       
-      $this->render('//Contacto/create',array('model'=>$model));
+      $this->render('//Contacto/create',array('model'=>$model,'modelProductos'=>$modelProductos));
 
 	}
 

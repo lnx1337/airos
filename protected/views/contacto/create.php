@@ -15,7 +15,7 @@ if(isset($_GET['sk'])){
 
 
 <?php 
-   echo $this->renderPartial('//Contacto/_form', array('model'=>$model));
+   echo $this->renderPartial('//Contacto/_form', array('model'=>$model,'modelProductos'=>$modelProductos));
 
  ?>
 
