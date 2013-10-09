@@ -4,9 +4,10 @@
   <div class="container"> 
     
     
-    <div class="span12">
+    <div class="span12 home-back">
     
-    Bievenido al CMS de Aceros Soria
+    <h3>Bievenido al CMS de Aceros Soria</h3>
+    <img src="../images/logo-top.png" alt="logo">
     
     </div>
     
