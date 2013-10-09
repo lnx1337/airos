@@ -1,13 +1,7 @@
 
 <!-- Navigation bar starts -->
-          <div class="navbar">
-           <div class="navbar-inner">
-             <div class="container">
-               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                 <span>Menu</span>
-               </a>
-               <div class="nav-collapse collapse">
-                <ul class="nav">
+          <div class="navbar-back">
+                <ul class="nav-back">
                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin">Inicio</a></li>
                    
                    <li class="dropdown">
@@ -29,8 +23,5 @@
                    <li><a href="#">Adm. Slider</a></li>
                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/logout">Salir</a></li>
                  </ul>
-               </div>
-              </div>
-           </div>
          </div>
 

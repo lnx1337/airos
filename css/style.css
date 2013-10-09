@@ -135,6 +135,59 @@ z-index:1000;
 
 }
 
+.home-back{font-size:1em;}
+
+.home-back h2{font-size: 2em;}
+
+.navbar-back{
+position:fixed;
+top:0;
+left:0;
+width: 100%;
+background:#646569;
+color:#333;
+z-index:1000;
+float: left;
+height: 250px;
+border-bottom: 2px solid #C61C35;
+
+}
+
+.navbar-inner-back{
+}
+
+.navbar-back span{
+	color:#646569;
+	}
+	
+	
+	.navbar-back ul{
+	display:inline-block;
+	margin:30px 0 0 0;
+	padding:10px;
+	text-align: center;
+	}
+	
+		.navbar-back li{
+		margin:0;
+		padding:5px 0 0 0;
+		list-style-type:0;
+		display:inline-block;
+		}
+		
+		.navbar-back li a{
+		display:inline-block;
+		background-color: #fff;
+		color:#333;
+		padding:1em 1.3em;
+		text-decoration:none;
+		text-transform: uppercase;
+		line-height:100%;
+		font-size: 12px;
+		}
+		
+
+
 	.navbar #logo{
 	position:absolute;
 	top:0;

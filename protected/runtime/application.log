@@ -5858,3 +5858,46 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/airos/index.php/slider
 ---
+2013/10/08 22:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-top.png".' in /Applications/MAMP/htdocs/yiis/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('images/logo-top...')
+#1 /Applications/MAMP/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/airos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/airos/index.php/images/logo-top.png
+HTTP_REFERER=http://localhost:8888/airos/index.php/admin/index
+---
+2013/10/08 22:47:16 [error] [exception.CException] exception 'CException' with message 'Property "Productos.linea_id" is not defined.' in /Applications/MAMP/htdocs/yiis/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiis/framework/db/ar/CActiveRecord.php(144): CComponent->__get('linea_id')
+#1 /Applications/MAMP/htdocs/yiis/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('linea_id')
+#2 /Applications/MAMP/htdocs/yiis/framework/web/helpers/CHtml.php(1887): CHtml::resolveValue(Object(Productos), 'linea_id')
+#3 /Applications/MAMP/htdocs/yiis/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(Productos), 'linea_id', Array)
+#4 /Applications/MAMP/htdocs/yiis/framework/web/widgets/CActiveForm.php(658): CHtml::activeTextField(Object(Productos), 'linea_id', Array)
+#5 /Applications/MAMP/htdocs/airos/protected/views/productos/_search.php(26): CActiveForm->textField(Object(Productos), 'linea_id')
+#6 /Applications/MAMP/htdocs/yiis/framework/web/CBaseController.php(127): require('/Applications/M...')
+#7 /Applications/MAMP/htdocs/yiis/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#8 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(870): CBaseController->renderFile('/Applications/M...', Array, true)
+#9 /Applications/MAMP/htdocs/airos/protected/views/productos/admin.php(28): CController->renderPartial('_search', Array)
+#10 /Applications/MAMP/htdocs/yiis/framework/web/CBaseController.php(127): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/yiis/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/M...', Array, true)
+#12 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(870): CBaseController->renderFile('/Applications/M...', Array, true)
+#13 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#14 /Applications/MAMP/htdocs/airos/protected/controllers/ProductosController.php(246): CController->render('admin', Array)
+#15 /Applications/MAMP/htdocs/yiis/framework/web/actions/CInlineAction.php(50): ProductosController->actionAdmin()
+#16 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /Applications/MAMP/htdocs/yiis/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /Applications/MAMP/htdocs/yiis/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /Applications/MAMP/htdocs/yiis/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/MAMP/htdocs/yiis/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(292): CFilterChain->run()
+#23 /Applications/MAMP/htdocs/yiis/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/MAMP/htdocs/yiis/framework/web/CWebApplication.php(283): CController->run('admin')
+#25 /Applications/MAMP/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('productos/admin')
+#26 /Applications/MAMP/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /Applications/MAMP/htdocs/airos/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/airos/index.php/productos/admin
+HTTP_REFERER=http://localhost:8888/airos/index.php/productos/create
+---
