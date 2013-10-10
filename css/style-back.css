@@ -1,0 +1,568 @@
+/*
+	99Lime.com HTML KickStart by Joshua Gatcke
+	style.css
+	
+*/
+
+/*---------------------------------
+	IMPORTS
+-----------------------------------*/
+@font-face {
+    font-family: 'coolveticaregular', 'Helvetica Neue', Helvetica sans-serif;
+    src: url('fonts/coolvetica/coolvetica_rg-webfont.eot');
+    src: url('fonts/coolvetica/coolvetica_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.woff') format('woff'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.ttf') format('truetype'),
+         url('fonts/coolvetica/coolvetica_rg-webfont.svg#coolveticaregular') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+
+/*---------------------------------
+	OVERRIDES
+-----------------------------------*/
+
+html{margin: 0px; padding: 0px; float: none;}
+
+h1,h2,h3,h4,h5,h6{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight:lighter;
+}
+
+thead th,
+tbody th{
+font-family: "coolveticaregular", "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+}
+
+button,
+a.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+}
+
+
+a{color:#C61C35; text-decoration: none;}
+
+a.gris{color: #333; text-decoration: none;}
+
+a.blanco{color: #fff; text-decoration: none;}
+
+a:link{color:#C61C35; text-decoration: none;}
+
+a:link.gris{color: #333; text-decoration: none;}
+
+a:link.blanco{color: #fff; text-decoration: none;}
+
+a:hover{color: #333; text-decoration: underline;}
+
+a:hover.gris{color: #fff;}
+
+a:hover.blanco{color: #333;}
+
+.menu{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight: lighter;
+}
+
+blockquote{
+font-family: "Arimo", arial, verdana, sans-serif;
+font-style: italic;
+}
+
+/*---------------------------------
+	LAYOUT
+-----------------------------------*/
+body{
+margin:0;
+padding:0 0 0 0;
+color:#000;
+background:#efefef url(/soria/css/img/gray_jean.png);
+font:lighter 0.9em/150% 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+letter-spacing: 0.02em;
+text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
+}
+
+#wrap{
+width:100%;
+background:#fff;
+margin:30px auto 30px auto;
+padding:0 2%;
+border:1px solid #ccc;
+}
+
+header{
+border-bottom: 0.2em solid #C61C35;
+float: left;
+width: 100%;
+height: auto;
+background-color: #646569;
+display: block;
+color: #fff;
+position: relative;}
+
+footer{
+text-align:center;
+padding:20px;
+width: 100%;
+margin:0 auto;
+border-top:1px solid #ddd;
+color:#999;
+font-size:0.8em;
+text-shadow:0px 1px 1px #fff;
+float: left;
+background:#fff;}
+
+
+	#link-top{
+	display:none;
+	}
+	
+	
+	
+	
+/* NAV BAR*/
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width: 100%;
+background:#000;
+color:#fff;
+z-index:1000;
+
+}
+
+	.navbar #logo{
+	position:absolute;
+	top:0;
+	right:0;
+	padding:0.5em 1em;
+	font-size: 1.7em;
+	color:#efefef;
+	text-decoration:none;
+	}
+	
+	.navbar span{
+	color:#86dc00;
+	}
+	
+	
+	.navbar ul{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	}
+	
+		.navbar li{
+		margin:0;
+		padding:0;
+		list-style-type:0;
+		display:inline-block;
+		}
+		
+		.navbar li a{
+		display:inline-block;
+		color:#efefef;
+		padding:1em 1.3em;
+		text-decoration:none;
+		text-transform: uppercase;
+		line-height:100%;
+		font-size: 1.2em;
+		}
+		
+.callout{
+background:#4598ef;/*#86dc00;*/
+padding:3em 0;
+color:#fff;
+box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+text-align: center;
+text-shadow:0px 1px 3px rgba(0,0,0,0.2);
+display:block;
+}
+	.callout + div.grid{margin-top:50px;}
+	 a.callout{cursor:pointer;}
+	 .callout i.icon-4x{font-size:6em;}
+	 .callout h4{margin-bottom:30px;}
+	 .callout-top{margin:50px 0 0 0;}
+	 .callout p{margin-bottom:0;}
+	 .callout .button{margin-top:10px;}
+	 .callout.green{background:#19ad0b;/*#86dc00;*/}
+	 
+#mc_embed_signup{
+padding:30px 0;
+}
+
+#ui-preview{
+border:5px solid #ddd;
+margin:30px 0;
+display:block;
+}
+
+
+
+/******************************************----------E S T I L O S    P R O P I O S------******************************************************/
+
+.sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; box-shadow: 0 0 5px #999; z-index: 20; }
+
+
+
+.clear-both{}
+	
+.clear-top{}
+
+.rojo{background-color: #C61C35;}
+
+.txt-rojo{color: #C61C35;}
+
+.gris{background-color: #646569;}
+
+.txt-gris{color: #646569;}
+
+.azul{}
+
+.txt-azul{}
+
+.negro{background-color: #333;}
+
+.txt-negro{color: #333;}
+
+.full-width{width: 100%; float: left;}
+
+
+::-webkit-input-placeholder {
+   color: #333; text-align: left;
+   font-size: 100%;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #333; text-align: left; 
+   font-size: 100%; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #333; text-align: left;
+   font-size: 100%; 
+}
+
+:-ms-input-placeholder {  
+   color: #333; text-align: left;
+   font-size: 100%;  
+}
+
+#slider{width: 100%;
+margin: 0 auto;
+height: auto;
+padding: 0;
+overflow: hidden;
+top: 0;}
+
+.fixed{}
+
+.datos{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-weight: lighter;
+background-color: #646569;
+color: #fff;
+font-size: 2em;
+padding: 0.2em 0.5em;
+width: 100%;
+display: inline-block;
+text-align: center;
+}
+
+.telefono{float: left; display: inline-block; width:40%;line-height: 1.5; margin: 0px;}
+
+.buscador{float: right; display: inline-block; width:50%; margin: 0px!important;}
+
+.buscador i{float: left; margin: 0px 5px 0px 0px; line-height: 1.5;}
+.garantia{}
+
+nav.categorias{}
+
+.menu-soria{
+font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+background-color: #d1d4da;
+color: #fff;
+font-size: 1.5em;
+padding: 0.5em;
+width: 100%;
+text-align: center;
+display: inline-block;
+margin: 0px auto;}
+
+.menu-soria ul{  text-align: center;}
+
+.menu-soria ul li{border-color: #7f7f7f; border-style: solid; border-width: thin; background-color: #a1a1a1; text-align: center; display: inline-block; margin: 5px auto; list-style-type: none; line-height:3; margin: 10px 15px; padding: 0px 10px 0px 10px;-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;}
+
+.menu-soria ul li.logo{ width: 400px; margin: 0px 10px 0px 10px; border:none 0px; background: transparent; padding: 0px;}
+
+.menu-soria ul li.logo img{width: 100%; }
+
+.menu-soria ul li.garantia{border: 0 none;}
+
+.menu-soria ul li.garantia small{font-size: 0.5em;
+font-weight: lighter;
+}
+
+.menu-soria ul li i{font-size: 1em;}
+
+.menu-soria ul li small{width: 100%;
+text-align: center;
+margin: 0px;
+line-height: 0;}
+
+.menu-soria ul li a{}
+
+.content-productos{float: left; width: 100%; height: auto;}
+
+.productos-random{}
+
+ul.productos-random{width: 100%;
+margin: 0px auto;}
+
+ul.productos-random li{}
+
+.item{ float: left;
+background-color: #C61C35;
+max-height: 355px;
+height: 355px;
+overflow: hidden;}
+
+.foto-producto{text-align: center;
+margin: 0px auto;
+padding: 0px 4px 0px 4px;
+display: inline-table;
+width: 100%;
+max-height: 180px!important;
+padding-bottom: inherit;}
+
+.foto-producto img{width: 100%;
+max-width: 100%;
+max-height: 180px;
+height: 180px;
+margin: auto;
+display: inline-block;}
+
+.footer-producto{font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
+
+small.footer-producto{display: inline-block;
+width: 100%;
+padding: 0px 1em;}
+
+small.footer-producto h5{color: #fff; font-size: 0.9em;}
+
+small.footer-producto h6{color:#fff; margin: 0px; font-size: 1.1em; margin-top: 3px;}
+
+small.footer-producto p{color: #fff;
+max-height: 100px;
+overflow: hidden;
+display: inline-block;
+width: 100%;
+text-align: justify;}
+
+small.footer-producto button{float: right;
+width: 100%;
+background-color: #fffff3;
+display: inline-block;
+margin: 0px 0px 5px 0px;}
+
+.todos{float: right; width: 100%; height: auto; padding: 5px;
+text-align: right; font-size: 1.1em;}
+
+span.copyright{float: left; margin-left: 11%}
+
+.menu-footer{float: right; margin-right: 11%}
+
+.menu-footer ul{float: left; margin: 0px;}
+
+.menu-footer ul li{list-style-type: none; display: inline-block;}
+
+.menu-footer ul li i{font-style: normal;}
+
+.top-title{float: left; padding: 0px; width: 100%; margin: 10px auto;}
+
+.top-title h2{margin: 0px; padding: 0px;}
+
+.navigation{margin-right: 10px;}
+
+.tabla-detalles{}
+
+.content-producto{}
+
+.slider-producto{}
+
+.detalle-producto{background-color:#f3f3f3; float:left; text-align: center; height:360px; max-height: 360px; overflow-y: auto; overflow-x: hidden;}
+
+.detalle-producto h3{font-size: 2em;}
+
+.detalle-producto article{float: left;}
+
+.detalle-producto article p{text-align: justify; padding: 1em;}
+
+.detalle-producto article span{float: left;}
+
+.detalle-producto article span i{}
+
+.relacionados{float: left; display: inline-block; text-align: center;}
+
+.relacionados ul{display:inline-block; margin: 0px; padding: 0px; text-align: center;}
+
+.relacionados ul li{display: inline-block;
+list-style-type: none;
+float: left;
+margin: 0.1em;}
+
+.relacionados ul li img{border: 0.3em #fff solid; width: 100%; height: auto;}
+
+.campo{width: 100%; display: inline-block;}
+
+.campo label{width: 100px;}
+
+.campo label.sel{width: 100%;}
+
+.campo input{width: 70%;}
+
+.campo select{width:100%;}
+
+.campo textarea{width: 100%; max-height: 100px;}
+
+.submit{float: right; margin: 5px 0px 0px 0px}
+
+ul.datos-contacto{}
+
+ul.datos-contacto li{width: 100%; list-style-type: none;}
+
+.mapas{width: 100%; display: inline-block;}
+
+.mapa{border: 0.2em #fff solid;}
+
+.mapas span.mapa{display: inline-table; background-color: #f3f3f3; height: 270px; text-align: justify;}
+
+.footer-mapa{padding: 0px 2em; float: left;}
+
+.historia{text-align: justify; margin: 2em auto;}
+
+.nosotros{text-align: justify; margin: 2em auto;}
+
+.mision{text-align: justify; margin: 2em 0.3em;}
+
+.vision{text-align: justify; margin: 2em 0.3em;}
+
+/*****************NAVEGACION DE CATEGORIAS************/
+
+.container-nav {
+    text-align: center;
+display: block;
+width: 100%;
+height: 40px;
+background-color: #646569;
+}
+.toggleMenu {
+    display:  none;
+    background: #646569;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+ul.nav-li{display: inline-table; margin: 0px auto;}
+.nav-li {
+    list-style: none;
+     *zoom: 1;
+     background:#646569;
+     display: inline-block;
+     float: left;
+ 
+     text-align: center;
+}
+.nav-li:before,
+.nav-li:after {
+    content: " "; 
+    display: table; 
+}
+.nav-li:after {
+    clear: both;
+}
+.nav-li ul {
+    list-style: none;
+    width: 9em;
+    margin: 0px auto!important;
+    padding: 0px!important;
+}
+.nav-li a {
+    padding: 10px 15px;
+    color:#fff;
+}
+.nav-li li {
+    position: relative;
+    display:inline;
+}
+.nav-li > li {
+    float: left;
+    text-align: center;
+padding: 0px 1em;
+}
+.nav-li > li > .parent {
+    background-image: url("/soria/images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav-li > li > a {
+    display: block;
+}
+.nav-li li  ul {
+    position: absolute;
+    left: -9999px;
+}
+.nav-li > li.hover > ul {
+    left: 0;
+}
+.nav-li li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav-li li li a {
+    display: block;
+    background: #646569;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #646569;
+}
+.nav-li li li li a {
+    background:#249578;
+    z-index:200;
+  
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
+    .nav-li > li {
+        float: none;
+    }
+    .nav-li > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav-li li li .parent {
+        background-image: url("/soria/images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav-li ul {
+        display: block;
+        width: 100%;
+    }
+   .nav-li > li.hover > ul , .nav-li li li.hover ul {
+        position: static;
+    }
+    .menu-soria{display: none;}
+
+}
+
+
+/*****************NAVEGACION DE CATEGORIAS************/
