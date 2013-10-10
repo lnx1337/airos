@@ -35,12 +35,14 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'clave',
-		'sublinea_id',
+		'linea_id',
 		'unidad_id',
-		'descripcion_producto',
-		'ficha_tecnica',
+		'descripcion',
+		'detalles',
+		/*
 		'vistos',
-				array(
+		*/
+		array(
 			'class'=>'CButtonColumn',
 		),
 	),
