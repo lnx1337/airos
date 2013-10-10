@@ -40,6 +40,29 @@
   </tr></tbody>
   </table>
 </div>
+</div>
+<div class="relacionados">
+<span class="top-title left"><h2>Productos Relacionados</h2></span>
+<ul><!--maximo 12 elementos-->
+
+
+<?php 
+
+$count=1;
+  foreach ($modelRelacionados as $key => $value) { ?>
+<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/productos/view/<?php echo $value->id;?>"><img src="http://placehold.it/150x150/" alt="relacionado"></a></li>
+
+
+<?php   if($i>12){ break; } } ?>
+
+</ul>
+
+</div>
+</div>
+</div><!-- END GRID-->
+</div>
+
+
 
 
                              

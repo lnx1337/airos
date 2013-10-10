@@ -51,10 +51,9 @@ class ProductosController extends Controller
 	 */
 	public function actionView($id)
 	{
-		
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+		$model=$this->loadModel($id);
+		$modelRelacionados=Productos::model()->findAll(array('condition'=>'sublinea_id='.$model->sublinea_id));
+		$this->render('view',array('model'=>$model,'modelRelacionados'=>$modelRelacionados));
 	}
 
 	/**
