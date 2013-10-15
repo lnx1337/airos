@@ -53,7 +53,7 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <div class="datos">
 <span class="telefono icon-phone col_6"> Atención a clientes: 55-5692-1000</span>
 <span class="buscador col_6">
-<i class="icon-search"></i> <input id="search" type="search" class="icon-search" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
+ <i class="icon-search" ></i><input id="search" type="search"  placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
 <ul>
 <li class="logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></li>
@@ -170,5 +170,6 @@ Yii::app()->clientScript->registerPackage('jquery');
 
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kickstart.js"></script>  
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/stickybar.js"></script>  
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>  
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/search.js"></script>    
 </body></html>

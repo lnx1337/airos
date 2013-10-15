@@ -28,7 +28,7 @@ class ProductosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','Linea','Busqueda','otro','sublinea'),
+				'actions'=>array('index','view','Linea','otro','sublinea','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -251,11 +251,11 @@ $model->attributes=$_POST['Cuentas'];
 		print_r($_POST);
 	}
 
-	public function actionBusqueda(){
+	public function actionSearch(){
 
-        if(isset($_POST['Productos']['s'])){
-		     $s=$_POST['Productos']['s'];
-		     $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion LIKE "%'.$s.'%" OR clave LIKE "%'.$s.'%"','order'=>'id DESC')));
+        if(isset($_POST['search'])){
+		     $s=$_POST['search'];
+		     $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$s.'%" OR clave LIKE "%'.$s.'%"','order'=>'id DESC')));
 			 $this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProvider,
 				'itemView'=>'_viewAll',
