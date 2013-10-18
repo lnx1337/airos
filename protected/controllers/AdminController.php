@@ -22,10 +22,20 @@ class AdminController extends Controller
 
 	public function actionNosotros(){
 
-       $model=Contenido::model()->findByPk(2);
-	   //print_r($model);
-       $this->render('nosotros',array('model'=>$model));
+	   $modelHistoria=Contenido::model()->findByPk(1);
+	   $modelNosotros=$this->loadModel(2);
+	   $modelMision=$this->loadModel(3);
+	   $modelVision=$this->loadModel(4);
+       $this->render('nosotros',array('modelHistoria'=>$modelHistoria,'modelNosotros'=>$modelNosotros,'modelMision'=>$modelMision,'modelVision'=>$modelVision));
 
+	}
+
+	public function loadModel($id)
+	{
+		$model=Contenido::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -86,16 +86,40 @@ class ContenidoController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		
+
+		 $modelHistoria=$this->loadModel(1);
+		 $modelNosotros=$this->loadModel(2);
+		 $modelMision=$this->loadModel(3);
+		 $modelVision=$this->loadModel(4);
+
+
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Contenido']))
 		{
-			$model->attributes=$_POST['Contenido'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		
+                 
+			
+			$modelHistoria->contenido=$_POST['Contenido']['contenido'];
+		    $modelNosotros->contenido=$_POST['Contenido']['nosotros'];
+		    $modelMision->contenido=$_POST['Contenido']['mision'];
+            $modelVision->contenido=$_POST['Contenido']['vision'];
+		
+		        
+		 if($modelHistoria->save() && $modelNosotros->save() && $modelMision->save() && $modelVision->save()){
+		 					
+
+		 					$this->redirect(array('admin/nosotros'));
+		  
+		 }
+
+		 
+	     
+		
+
 		}
 
 		$this->render('update',array(

@@ -35,10 +35,10 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'clave',
-		'linea_id',
-		'unidad_id',
-		'descripcion',
-		'detalles',
+		//'sublinea_id',
+		//'unidad_id',
+		'descripcion_producto',
+		'ficha_tecnica',
 		/*
 		'vistos',
 		*/

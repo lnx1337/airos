@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'linea_id'); ?>
-		<?php echo $form->textField($model,'linea_id'); ?>
+		<?php echo $form->label($model,'sublinea_id'); ?>
+		<?php echo $form->textField($model,'sublinea_id'); ?>
 	</div>
 
 	<div class="row">
@@ -32,13 +32,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->label($model,'descripcion_producto'); ?>
+		<?php echo $form->textField($model,'descripcion_producto',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'detalles'); ?>
-		<?php echo $form->textField($model,'detalles',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'ficha_tecnica'); ?>
+		<?php echo $form->textField($model,'ficha_tecnica',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">

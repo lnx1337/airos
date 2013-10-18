@@ -30,7 +30,6 @@
                    <li class="group">
                     <h3>Administrar Secciones</h3>
                     <ul>
-                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/inicio">Adm. Inicio</a></li>
                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/nosotros">Adm. Nosotros</a></li>
                    <li><a href="#">Adm. Slider</a>
                     </ul>

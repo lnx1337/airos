@@ -28,7 +28,7 @@ class ProductosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','Linea','otro','sublinea','search'),
+				'actions'=>array('index','view','Linea','otro','sublinea','search','autocom'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -250,6 +250,25 @@ $model->attributes=$_POST['Cuentas'];
 
 		print_r($_POST);
 	}
+
+
+    public function actionAutocom(){
+
+        $json=array();
+        if(isset($_GET['term'])){
+        	
+        	$modelAuto= Productos::model()->findAll(array('condition'=>' descripcion_producto LIKE "%'.$_GET['term'].'%"'));
+
+        	foreach ($modelAuto as $key => $value) {
+               $json[]=$value->descripcion_producto;
+         	}
+
+        	echo json_encode($json);
+		 	 
+	    }
+
+}
+
 
 	public function actionSearch(){
 

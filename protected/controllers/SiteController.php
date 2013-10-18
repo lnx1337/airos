@@ -54,7 +54,7 @@ class SiteController extends Controller
 	}
 
 	public function actionNosotros(){
-        $modelContenido= Contenido::model()->find(array('condition'=>'posiciones_id=1'));
+        $modelContenido= Contenido::model()->findAll(array('condition'=>'posiciones_id in (1,2,3,4)'));
 		$this->render('nosotros',array('modelContenido'=>$modelContenido));
 	}
 

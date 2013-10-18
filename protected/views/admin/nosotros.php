@@ -14,7 +14,7 @@
 <div class="span12">
                               <div class="cwell">
                                  <!-- Contact form -->
-                                 <h5>Editando: Texto de Nosotros</h5>
+                                 <h5>Editando: Texto de Nosotros Historia</h5>
                                     <div class="form">
                                          
                                         <div class="form-horizontal">
@@ -25,15 +25,36 @@
                                           'action'=>Yii::app()->request->baseUrl."/index.php/contenido/update/2"
                                         )); ?>
 
-                                            <?php echo $form->errorSummary($model); ?>
+                                            <?php echo $form->errorSummary($modelHistoria); ?>
                                           <div class="control-group">
 
                                             <div class="controls">
 
-                                            <?php echo $form->labelEx($model,'contenido'); ?>
-                                            <?php echo $form->textArea($model,'contenido',array('rows'=>15,'id'=>'txt_home')); ?>
-                                            <?php echo $form->error($model,'contenido'); ?>
-                                          </div>
+                                            <?php echo $form->labelEx($modelHistoria,'contenido'); ?>
+                                            <?php echo $form->textArea($modelHistoria,'contenido',array('rows'=>15,'id'=>'txt_home')); ?>
+                                            <?php echo $form->error($modelHistoria,'contenido'); ?>
+                                          </div> 
+                                           <h5>Editando: Texto de Nosotros Nosotros</h5>
+
+                                            <div class="controls">
+                                               <label>Nosotros</label>
+                                               <textarea name="Contenido[nosotros]"><?php echo $modelNosotros->contenido; ?></textarea>
+                                            </div>
+
+
+                                            <h5>Editando: Texto de Nosotros Misión</h5>
+
+                                            <div class="controls">
+                                               <label>Misión</label>
+                                               <textarea name="Contenido[mision]"><?php echo $modelMision->contenido; ?></textarea>
+                                            </div>
+
+                                            <h5>Editando: Texto de Nosotros Visión</h5>
+
+                                             <div class="controls">
+                                                   <label>Visión</label>
+                                                   <textarea name="Contenido[vision]"><?php echo $modelVision->contenido; ?></textarea>
+                                             </div>
 
                                          </div>
                                           <div class="form-actions">

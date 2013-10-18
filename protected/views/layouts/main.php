@@ -13,7 +13,9 @@
 	<!-- Stylesheets -->
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" media="all" />  
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" media="all" /> 
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+
  
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
   
@@ -53,10 +55,10 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <div class="datos">
 <span class="telefono icon-phone col_6"> Atención a clientes: 55-5692-1000</span>
 <span class="buscador col_6">
- <i class="icon-search" ></i><input id="search" type="search"  placeholder="Buscar Producto..." style="width:93%;" /></span></div>
+ <i class="icon-search" ></i><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
 <ul>
-<li class="logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></li>
+<li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase"></i><small>Nosotros</small></li></a>
 <li>
 <a href="https://twitter.com/acerossoria" target="_blank"><i class="icon-twitter"></i></a>
@@ -171,5 +173,6 @@ Yii::app()->clientScript->registerPackage('jquery');
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kickstart.js"></script>  
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/stickybar.js"></script>  
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>	
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/search.js"></script>    
 </body></html>

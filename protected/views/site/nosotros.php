@@ -1,18 +1,23 @@
 <span class="top-title"><h2>Nosotros</h2></span>
 <article class="historia">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 <p><?php echo $modelContenido[0]->contenido; ?></p>
 </article>
 
+<h2>Historia</h2>
 <article class="nosotros">
-       <p><?php echo $modelContenido->contenido; ?></p>
+       <p><?php echo $modelContenido[1]->contenido; ?></p>
 </article>
-<div class="clear-both"></div>
+
+<h2>Misión</h2>
 <span class="col_6 mision">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+       <p><?php echo $modelContenido[2]->contenido; ?></p>
+
 </span>
 
+<h2>Visión</h2>
 <span class="col_6 vision">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+       <p><?php echo $modelContenido[3]->contenido; ?></p>
+
 </span>
 
 <!-- Gallery -->
