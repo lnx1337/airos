@@ -19,11 +19,23 @@
 	<?php echo $form->errorSummary($model); ?>
 
 <br>
-		<?php echo $form->labelEx($model,'sublinea_id'); ?>
-		<?php echo $form->textField($model,'sublinea_id'); ?>
-		<?php echo $form->error($model,'sublinea_id'); ?>
+<label>Lineas</label>
+ <?php echo CHtml::dropDownList('Lineas[id]', 'id', CHtml::listData(Lineas::model()->findAll(), 'id', 'descripcion'),array('empty' => 'Lineas','ajax' => array(
+			           'type'=>'POST',
+			           'url'=>CController::createUrl('Lineas/Sublineas'),
+			            //'update'=>'#scroll3',
+			           'success'=>'function(data) {
+			                  var json= JSON.parse(data);
+			                   $("#Productos_sublinea_id").html(json.Sublineas);
 
-	
+			            }',
+			           ))); ?>
+
+<br>
+		<?php echo $form->labelEx($model,'sublinea_id'); ?>
+	    <?php echo $form->dropDownList($model,'sublinea_id', CHtml::listData(Sublineas::model()->findAll(), 'id', 'descripcion'), array('empty'=>'Seleccion'));  ?>
+		<?php echo $form->error($model,'sublinea_id'); ?>
+<br>
 		<?php echo $form->labelEx($model,'unidad_id'); ?>
 	    <?php  echo $form->dropDownList($model,'unidad_id', CHtml::listData(Unidades::model()->findAll(), 'id', 'descripcion'), array('empty'=>'Seleccion'));  ?>
 		<?php echo $form->error($model,'unidad_id'); ?>

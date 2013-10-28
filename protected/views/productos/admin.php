@@ -37,11 +37,17 @@ $('.search-form form').submit(function(){
 		'clave',
 		//'sublinea_id',
 		//'unidad_id',
+		
 		'descripcion_producto',
 		'ficha_tecnica',
 		/*
 		'vistos',
 		*/
+		array(        
+          'name'=>'imagen',
+          'value'=>'CHtml::image($data->getImage($data->sublinea->linea->clave),"imagen",array(\'width\'=>200, \'height\'=>200))',
+          'type'=>'raw',
+         ),
 		array(
 			'class'=>'CButtonColumn',
 		),

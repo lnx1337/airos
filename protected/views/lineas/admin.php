@@ -32,6 +32,11 @@ $('.search-form form').submit(function(){
 		'id',
 		'clave',
 		'descripcion',
+		 array(        
+          'name'=>'imagen',
+          'value'=>'CHtml::image($data->getImage($data->clave),"imagen",array(\'width\'=>200, \'height\'=>200))',
+          'type'=>'raw',
+       ),
 		array(
 			'class'=>'CButtonColumn',
 		),

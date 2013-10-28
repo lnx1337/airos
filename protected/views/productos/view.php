@@ -8,7 +8,7 @@
 <div class="detalle-producto col_5">
 <h3>Ficha Técnica y detalles</h3>
 <article>
-<p>Linea: <?php echo $model->sublinea->linea->descripcion; ?><br>Sublinea: <?php echo $model->sublinea->descripcion; ?><br>Clave: <?php echo $model->clave; ?><br> Nombre del Producto: <?php echo $model->producto; ?></p>
+<p>Linea: <?php echo $model->sublinea->linea->descripcion; ?><br>Sublinea: <?php echo $model->sublinea->descripcion; ?><br>Clave: <?php echo $model->clave; ?><br> Nombre del Producto: <?php echo $model->producto; ?></p><br><?php echo $model->ficha_tecnica; ?>
 <span>
 <!--<i class="icon-info-sign"> pza/kg/metro</i>-->
 </span>

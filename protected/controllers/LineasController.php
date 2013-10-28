@@ -28,7 +28,7 @@ class LineasController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','Busqueda'),
+				'actions'=>array('index','view','Busqueda','Sublineas'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -216,6 +216,19 @@ class LineasController extends Controller
 			    )); 
 
 	    }
+	}
+
+	public function actionSublineas(){
+
+         $modeSublineas=Sublineas::model()->findAll(array('condition'=>'linea_id='.$_POST['Lineas']['id']));
+         $json=array();
+         $Sublineas=CHtml::tag('option',array('value'=>''),CHtml::encode('Sublineas'),true);
+         foreach ($modeSublineas as $key => $value) {
+             $Sublineas.=CHtml::tag('option',array('value'=>$value->id),CHtml::encode($value->descripcion),true);
+         }
+         $json['Sublineas']=$Sublineas;
+         echo json_encode($json);
+
 	}
 
 	/**

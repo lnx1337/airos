@@ -66,10 +66,13 @@ return array(
 	*/	
 
 	'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=soriadb',
+			//'connectionString' => 'mysql:host=localhost;dbname=aceros_soria',
+		    'connectionString' => 'mysql:host=localhost;dbname=soriadb',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			//'username' => 'acero_soria',
+			//'password' => 'lamisma00',
+			'username'=>'root',
+			'password'=>'',
 			'charset' => 'utf8',
 		),
 

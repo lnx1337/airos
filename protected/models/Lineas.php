@@ -94,4 +94,16 @@ class Lineas extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+
+	public function getImage($clave){
+           $imagen="";  
+           if(file_exists(getcwd()."/lineasImages/".$clave.".jpg")){
+                $imagen=Yii::app()->request->baseUrl."/lineasImages/".$clave.".jpg";
+           }else{
+           	     $imagen="http://placehold.it/200x200";
+           }
+           return $imagen;
+
+	}
 }
