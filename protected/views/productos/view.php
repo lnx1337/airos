@@ -1,4 +1,16 @@
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <span class="top-title"><h2><?php echo $model->descripcion_producto; ?></h2></span>
 <div class="slider-producto col_7">
 <ul class="slideshow">
