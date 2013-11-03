@@ -599,6 +599,7 @@ position: relative;
 z-index: 100;
 border-top: 1px solid #fff;
 padding: 0.2em;
+font-size: 0.8em;
 }
 .nav-li li li li a {
     background:#249578;
