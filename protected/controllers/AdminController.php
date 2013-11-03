@@ -20,7 +20,7 @@ class AdminController extends Controller
 	}
 
 
-	public function actionNosotros(){
+	public function actionnosotros(){
 
 	   $modelHistoria=Contenido::model()->findByPk(1);
 	   $modelNosotros=$this->loadModel(2);
@@ -37,6 +37,15 @@ class AdminController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+
+
+
+   public function actionDatos(){
+
+   echo "Datos";
+
+   }
+
 
 	// Uncomment the following methods and override them if needed
 	/*
