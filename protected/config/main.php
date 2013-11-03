@@ -72,7 +72,7 @@ return array(
 			//'username' => 'acero_soria',
 			//'password' => 'lamisma00',
 			'username'=>'root',
-			'password'=>'',
+			'password'=>'R41n0v4c10n',
 			'charset' => 'utf8',
 		),
 
