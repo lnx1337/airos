@@ -72,8 +72,8 @@ return array(
 			//'username' => 'acero_soria',
 			//'password' => 'lamisma00',
 			'username'=>'root',
-			'password'=>'R41n0v4c10n',
-			//'password'=>'',
+			//'password'=>'R41n0v4c10n',
+			'password'=>'',
 			'charset' => 'utf8',
 		),
 
