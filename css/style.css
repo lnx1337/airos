@@ -593,11 +593,12 @@ padding: 0px 0.5em;
     top: 0;
 }
 .nav-li li li a {
-    display: block;
-    background: #646569;
-    position: relative;
-    z-index:100;
-    border-top: 1px solid #646569;
+ display: block;
+background: #646569;
+position: relative;
+z-index: 100;
+border-top: 1px solid #fff;
+padding: 0.2em;
 }
 .nav-li li li li a {
     background:#249578;
