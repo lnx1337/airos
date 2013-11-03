@@ -65,7 +65,10 @@ $count=1;
 <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/productos/view/<?php echo $value->id;?>"><img src="http://placehold.it/150x150/" alt="relacionado"></a></li>
 
 
-<?php   if($i>12){ break; } } ?>
+<?php   if($count>12){ break; }
+          $count++;
+
+ } ?>
 
 </ul>
 
