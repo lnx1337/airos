@@ -67,11 +67,11 @@ return array(
 
 	'db'=>array(
 
-		     //servidorparallels
+		     //servidorparallels descomenta la linea de abajo para el de parallels
 			//'connectionString' => 'mysql:host=localhost;dbname=aceros_soria',
 		    'connectionString' => 'mysql:host=localhost;dbname=soriadb',
 			'emulatePrepare' => true,
-			//servidor parallels
+			//servidorparallels descomenta la linea de abajo para el de parallels
 			//'username' => 'acero_soria',
 			//'password' => 'lamisma00',
 			//servidor rainfinitum
