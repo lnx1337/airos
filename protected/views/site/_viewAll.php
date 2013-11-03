@@ -10,7 +10,7 @@
 $imagen="";
 
 if($data->imagen!=null){
-     $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
+     $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$data->imagen;
 }else {?>
 
      <?php  if(file_exists(getcwd().'/lineasImages/'.$data->sublinea->linea->clave.'.jpg')){ ?> 
