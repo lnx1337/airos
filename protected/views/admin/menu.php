@@ -1,4 +1,3 @@
-
 <!-- Navigation bar starts -->
           <div class="navbar-back">
                 <ul class="nav-back">

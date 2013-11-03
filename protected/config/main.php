@@ -73,6 +73,7 @@ return array(
 			//'password' => 'lamisma00',
 			'username'=>'root',
 			'password'=>'R41n0v4c10n',
+			//'password'=>'',
 			'charset' => 'utf8',
 		),
 
