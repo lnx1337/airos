@@ -20,7 +20,7 @@ class AdminController extends Controller
 	}
 
 
-	public function actionnosotros(){
+	public function actionNosotros(){
 
 	   $modelHistoria=Contenido::model()->findByPk(1);
 	   $modelNosotros=$this->loadModel(2);

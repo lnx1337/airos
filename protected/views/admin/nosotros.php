@@ -72,7 +72,7 @@
                                          </div>
                                           <div class="form-actions">
 
-                                            <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn')); ?>
+                                            <input type="submit" value="Guardar" />
                                           </div>
                                         <?php $this->endWidget(); ?>
 
