@@ -1,16 +1,3 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <?php  
 if(isset($_GET['sk'])){
 	if($_GET['sk']==1){
