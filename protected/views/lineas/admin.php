@@ -1,18 +1,5 @@
 <?php $this->renderPartial('/admin/menu'); ?>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <h1>Admin Lineas</h1>
 <?php
 Yii::app()->clientScript->registerScript('search', "

@@ -1,17 +1,5 @@
 <?php $this->renderPartial('/admin/menu'); ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <div class="content">
 
