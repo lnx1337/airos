@@ -355,13 +355,19 @@ text-align: center;
 display: inline-block;
 margin: 0px auto;}
 
-.menu-soria ul{  text-align: center;}
+.menu-soria ul{  text-align: center; margin:0px;}
 
 .menu-soria ul li{border-color: #7f7f7f; border-style: solid; border-width: thin; background-color: #a1a1a1; text-align: center; display: inline-block; margin: 5px auto; list-style-type: none; line-height:3; margin: 10px 15px; padding: 0px 10px 0px 10px;-webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;}
 
-.menu-soria ul li.logo{ width: 400px; margin: 0px 10px 0px 10px; border:none 0px; background: transparent; padding: 0px;}
+.menu-soria ul li.logo{ width: 400px;
+margin: 0px 210px 0px 10px;
+border: none 0px;
+background: transparent;
+padding: 0px;
+float: left;
+}
 
 .menu-soria ul li.logo img{width: 100%; }
 
