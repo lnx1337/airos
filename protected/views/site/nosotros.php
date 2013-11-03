@@ -1,22 +1,35 @@
 <span class="top-title"><h2>Nosotros</h2></span>
 <article class="historia">
-	 <p><?php echo $modelContenido[0]->contenido; ?></p>
+	 <p>  <?php    
+
+	 if(is_array($modelContenido))
+	     echo $modelContenido[0]->contenido; 
+	  ?>  
+
+	 </p>
 </article>
 
 <h2>Historia</h2>
 <article class="nosotros">
-       <p><?php echo $modelContenido[1]->contenido; ?></p>
+       <p><?php 
+       	 if(is_array($modelContenido))
+              echo $modelContenido[1]->contenido; ?>
+      </p>
 </article>
 
 <h2>Misión</h2>
 <span class="col_6 mision">
-       <p><?php echo $modelContenido[2]->contenido; ?></p>
+       <p><?php  if(is_array($modelContenido))
+                       echo $modelContenido[2]->contenido; ?>
+       </p>
 
 </span>
 
 <h2>Visión</h2>
 <span class="col_6 vision">
-       <p><?php echo $modelContenido[3]->contenido; ?></p>
+       <p><?php   	 if(is_array($modelContenido))
+                            echo $modelContenido[3]->contenido; ?>
+          </p>
 
 </span>
 
