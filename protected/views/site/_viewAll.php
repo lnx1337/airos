@@ -6,7 +6,7 @@
 
 
 
-<? 
+<?php 
 $imagen="";
 
 if($data->imagen!=null){

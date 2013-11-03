@@ -2,16 +2,20 @@
 <span class="foto-producto">
 
 <?php 
-echo getcwd();
- if(file_exists(getcwd().'/lineasImages/'.$data->sublinea->linea->clave.'.jpg')){ ?>
-	<img class="productosimg" src="<?php echo Yii::app()->request->baseUrl; ?>/lineasImages/<?php echo $data->sublinea->linea->clave.'.jpg'; ?>" alt="producto" width="300" height="180" />
+$imagen="";
 
-<?php }else { ?>
+if($data->imagen!=null){
+     $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
+}else {?>
 
-	<img src="http://placehold.it/300x180" alt="producto" />
+     <?php  if(file_exists(getcwd().'/lineasImages/'.$data->sublinea->linea->clave.'.jpg')){ ?> 
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/'.$data->sublinea->linea->clave.'.jpg'; ?>
+     <?php }else { ?>
+                   <?php $imagen="http://placehold.it/300x180"; ?>
+     <?php } ?>
+<?php } ?>
+<img class="productosimg" src="<?php echo  $imagen; ?>" alt="producto" width="300" height="180" />
 
-
-<? } ?>
 
 </span>
 <small class="footer-producto gris">

@@ -201,15 +201,13 @@ $model->attributes=$_POST['Cuentas'];
 
     public function actionSublinea($id){
 
-
          $dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'descripcion_producto','condition'=>'sublinea_id='.$id)));
 
-		  $this->render('index',array(
+		  $this->render('sublinea',array(
 		    	'dataProvider'=>$dataProvider,
 
 		  ));
-
-
+		 
 
 
    } 
