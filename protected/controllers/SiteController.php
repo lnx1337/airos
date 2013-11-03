@@ -83,7 +83,7 @@ class SiteController extends Controller
 
 		}
       
-      $this->render('//Contacto/create',array('model'=>$model,'modelProductos'=>$modelProductos));
+      $this->render('/Contacto/create',array('model'=>$model,'modelProductos'=>$modelProductos));
 
 	}
 
