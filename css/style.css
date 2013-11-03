@@ -265,7 +265,8 @@ display:block;
 
 /******************************************----------E S T I L O S    P R O P I O S------******************************************************/
 
-.sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; box-shadow: 0 0 5px #999; z-index: 20; }
+.sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; 
+box-shadow: 0 0 5px #999; z-index: 500; position:fixed; top:0; }
 
 
 
