@@ -9,6 +9,8 @@
 <br>
 <br>
 <br>
+<br>
+<br>
 <div class="content">
   <div class="container"> 
     
@@ -16,7 +18,7 @@
     <div class="span12 home-back">
     
     <h3>Bievenido al CMS de Aceros Soria</h3>
-    <img src="../images/logo-top.png" alt="logo">
+    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo">
     
     </div>
     
