@@ -266,7 +266,7 @@ display:block;
 /******************************************----------E S T I L O S    P R O P I O S------******************************************************/
 
 .sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; 
-box-shadow: 0 0 5px #999; z-index: 500; position:fixed; top:0; }
+box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 1px solid #C20D0D;}
 
 
 
@@ -318,9 +318,10 @@ margin: 0 auto;
 height: auto;
 padding: 0;
 overflow: hidden;
-top: 0;}
+float:left;
+display:block;}
 
-.fixed{}
+.fixed{position:fixed;}
 
 .datos{
 font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
