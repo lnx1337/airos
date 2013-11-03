@@ -6725,3 +6725,18 @@ Stack trace:
 REQUEST_URI=/airos/index.php/images/logo-top.png
 HTTP_REFERER=http://localhost/airos/index.php/admin/index
 ---
+2013/11/03 15:07:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-top.png".' in /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/web/CWebApplication.php(142): CWebApplication->runController('images/logo-top...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiis/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/airos/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/airos/index.php/images/logo-top.png
+HTTP_REFERER=http://localhost/airos/index.php/admin/index
+---
+2013/11/03 15:15:32 [warning] [application] Failed to set unsafe attribute "imagen" of "Productos".
+in /Applications/XAMPP/xamppfiles/htdocs/airos/protected/controllers/ProductosController.php (77)
+in /Applications/XAMPP/xamppfiles/htdocs/airos/index.php (13)
+2013/11/03 15:25:10 [warning] [application] Failed to set unsafe attribute "imagen" of "Productos".
+in /Applications/XAMPP/xamppfiles/htdocs/airos/protected/controllers/ProductosController.php (241)
+in /Applications/XAMPP/xamppfiles/htdocs/airos/index.php (13)

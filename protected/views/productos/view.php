@@ -2,7 +2,19 @@
 <span class="top-title"><h2><?php echo $model->descripcion_producto; ?></h2></span>
 <div class="slider-producto col_7">
 <ul class="slideshow">
-<li><img src="<?php echo Yii::app()->request->baseUrl; ?>/lineasImages/<?php echo $model->sublinea->linea->clave.'.jpg'; ?>" width="600" height="400" /></li>
+
+<?php 
+$imagen;
+if($model->imagen!=null){
+  $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
+}else{
+  $imagen=Yii::app()->request->baseUrl."/lineasImages/".$model->sublinea->linea->clave.'.jpg';
+}
+
+
+?>
+
+<li><img src="<?php echo $imagen; ?>" width="600" height="400" /></li>
 </ul>
 </div>
 <div class="detalle-producto col_5">

@@ -21,6 +21,9 @@
  */
 class Productos extends CActiveRecord
 {
+
+
+	public $imagen;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -49,10 +52,10 @@ class Productos extends CActiveRecord
 		return array(
 			array('sublinea_id, unidad_id, clave, descripcion_producto', 'required'),
 			array('sublinea_id, unidad_id, vistos', 'numerical', 'integerOnly'=>true),
+			array('imagen', 'file', 'types'=>'jpg, gif, png,','allowEmpty' => true),
 			array('clave', 'length', 'max'=>30),
 			array('descripcion_producto', 'length', 'max'=>200),
 			array('producto', 'length', 'max'=>100),
-			array('imagen', 'length', 'max'=>50),
 			array('ficha_tecnica', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

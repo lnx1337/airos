@@ -14,6 +14,8 @@
  */
 class Lineas extends CActiveRecord
 {
+
+	public $imagen;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -41,8 +43,9 @@ class Lineas extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('clave, descripcion', 'required'),
-			array('clave, imagen', 'length', 'max'=>45),
+			array('clave', 'length', 'max'=>45),
 			array('descripcion', 'length', 'max'=>100),
+			array('imagen', 'file', 'types'=>'jpg, gif, png,','allowEmpty' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, clave, descripcion, imagen', 'safe', 'on'=>'search'),
