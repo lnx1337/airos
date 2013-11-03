@@ -2,7 +2,7 @@
 <article class="historia">
 	 <p>  <?php    
 
-	 if(is_array($modelContenido))
+	 if(isset($modelContenido[0]))
 	     echo $modelContenido[0]->contenido; 
 	  ?>  
 
@@ -12,14 +12,14 @@
 <h2>Historia</h2>
 <article class="nosotros">
        <p><?php 
-       	 if(is_array($modelContenido))
+       	 if(isset($modelContenido[1]))
               echo $modelContenido[1]->contenido; ?>
       </p>
 </article>
 
 <h2>Misión</h2>
 <span class="col_6 mision">
-       <p><?php  if(is_array($modelContenido))
+       <p><?php  if(isset($modelContenido[2]))
                        echo $modelContenido[2]->contenido; ?>
        </p>
 
@@ -27,7 +27,7 @@
 
 <h2>Visión</h2>
 <span class="col_6 vision">
-       <p><?php   	 if(is_array($modelContenido))
+       <p><?php   	if(isset($modelContenido[3]))
                             echo $modelContenido[3]->contenido; ?>
           </p>
 
