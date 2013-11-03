@@ -66,14 +66,20 @@ return array(
 	*/	
 
 	'db'=>array(
+
+		     //servidorparallels
 			//'connectionString' => 'mysql:host=localhost;dbname=aceros_soria',
 		    'connectionString' => 'mysql:host=localhost;dbname=soriadb',
 			'emulatePrepare' => true,
+			//servidor parallels
 			//'username' => 'acero_soria',
 			//'password' => 'lamisma00',
+			//servidor rainfinitum
 			'username'=>'root',
 			'password'=>'R41n0v4c10n',
-			//'password'=>'',
+			//accesos locales
+			 //'username'=>'root',
+			 //'password'=>'',
 			'charset' => 'utf8',
 		),
 
