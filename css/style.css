@@ -96,12 +96,11 @@ border:1px solid #ccc;
 header{
 border-bottom: 0.2em solid #C61C35;
 float: left;
-width: 100%;
-height: auto;
 background-color: #646569;
-display: block;
+display: inline-block;
 color: #fff;
-position: relative;}
+height: 280px;
+width: 100%;}
 
 footer{
 text-align:center;
