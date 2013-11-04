@@ -47,7 +47,7 @@ $(document).keypress(function(e) {
 });
 
 
-$(".icon-search").live('click',function(){  
+$(".icon-search").click(function(){  
 var textSearch =$("#search").val();
 
 if(textSearch.length > 0 && textSearch != null){
