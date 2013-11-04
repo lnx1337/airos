@@ -48,7 +48,7 @@ $(document).ready(function(){
 <header>
 <div class="sticky_navigation">
 <div class="datos">
-<span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: 55-5692-1000</small></span>
+<span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: (55)-5692-1000</small></span>
 <span class="buscador col_6">
  <a href="#resultados"><i class="icon-search right"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
