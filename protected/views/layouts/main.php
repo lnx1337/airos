@@ -15,8 +15,24 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" media="all" /> 
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+ <script>
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
- 
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+ </script>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
   
 </head>
@@ -32,21 +48,21 @@
 <header>
 <div class="sticky_navigation">
 <div class="datos">
-<span class="telefono icon-phone col_6"> Atención a clientes: 55-5692-1000</span>
+<span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: 55-5692-1000</small></span>
 <span class="buscador col_6">
- <i class="icon-search" ></i><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
+ <a href="#resultados"><i class="icon-search right"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
 <ul>
 <li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase"></i><small>Nosotros</small></li></a>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase red"></i><small>Nosotros</small></li></a>
 <li>
 <a href="https://twitter.com/acerossoria" target="_blank"><i class="icon-twitter"></i></a>
 <a href="https://www.facebook.com/acerossoria" target="_blank"><i class="icon-facebook"></i></a>
 <a href="https://plus.google.com/114038653456290361525/posts" target="_blank"><i class="icon-google-plus"></i></a>
 </li>
-<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/contacto" class="blanco"><li><i class="icon-envelope-alt"></i><small>Contacto</small></li></a>
-<li class="garantia"><i class="icon-truck"></i><small>Garantía de entrega</small></li>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/contacto" class="blanco"><li><i class="icon-envelope-alt red"></i><small>Contacto</small></li></a>
 </ul>
+<span class="garantia"><i class="icon-truck"></i><small> Garantía de entrega, <strong>Entregamos antes de 24hrs</strong> (sujeto a disponibilidad)</small></span>
 </div>
 <div class="container-nav">
 
@@ -129,8 +145,7 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 
 
 
-
-<div class="content shadow">
+<div class="content shadow" id="resultados">
 <div class="grid">
 <div class="content-productos">
 <div class="col_12">

@@ -7,6 +7,8 @@
 /*---------------------------------
 	IMPORTS
 -----------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
 @font-face {
     font-family: 'coolveticaregular', 'Helvetica Neue', Helvetica sans-serif;
     src: url('fonts/coolvetica/coolvetica_rg-webfont.eot');
@@ -26,13 +28,13 @@
 html{margin: 0px; padding: 0px; float: none;}
 
 h1,h2,h3,h4,h5,h6{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:lighter;
 }
 
 thead th,
 tbody th{
-font-family: "coolveticaregular", "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 button,
@@ -40,7 +42,7 @@ a.btn,
 input[type="submit"],
 input[type="reset"],
 input[type="button"]{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 
@@ -63,7 +65,7 @@ a:hover.gris{color: #fff;}
 a:hover.blanco{color: #333;}
 
 .menu{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: lighter;
 }
 
@@ -80,7 +82,7 @@ margin:0;
 padding:0 0 0 0;
 color:#000;
 background:#efefef url(/soria/css/img/gray_jean.png);
-font:lighter 0.9em/150% 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font:lighter 0.9em/150% 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 letter-spacing: 0.02em;
 text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
 }
@@ -94,12 +96,12 @@ border:1px solid #ccc;
 }
 
 header{
-border-bottom: 0.2em solid #C61C35;
 float: left;
 background-color: #646569;
 display: inline-block;
 color: #fff;
-height: 280px;
+height: 220px;
+max-height: 220px;
 width: 100%;}
 
 footer{
@@ -265,7 +267,7 @@ display:block;
 /******************************************----------E S T I L O S    P R O P I O S------******************************************************/
 
 .sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; 
-box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 1px solid #C20D0D;}
+box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3px solid #C61C35;}
 
 
 
@@ -274,6 +276,8 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 1
 .clear-top{}
 
 .rojo{background-color: #C61C35;}
+
+.red{color:#C61C35!important;}
 
 .txt-rojo{color: #C61C35;}
 
@@ -314,16 +318,18 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 1
 
 #slider{width: 100%;
 margin: 0 auto;
-height: auto;
+height: 420px;
 padding: 0;
 overflow: hidden;
 float:left;
 display:block;}
 
+#slider img{width: 100%; height: auto;}
+
 .fixed{position:fixed;}
 
 .datos{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 font-weight: lighter;
 background-color: #646569;
 color: #fff;
@@ -334,17 +340,18 @@ display: inline-block;
 text-align: center;
 }
 
-.telefono{float: left; display: inline-block; width:40%;line-height: 1.5; margin: 0px;}
+.telefono{float: left; display: inline-block; margin: 8px 0px;}
 
-.buscador{float: right; display: inline-block; width:50%; margin: 0px!important;}
+.buscador{float: left; display: inline-block; width:50%; margin: 0px!important;}
 
-.buscador i{float: left; margin: 0px 5px 0px 0px; line-height: 1.5;}
-.garantia{}
+.buscador i{float: right; margin: 0px 5px 0px 0px; line-height: 1.5;}
+.garantia{background: none; 
+	background-color: transparent!important;margin: 0px!important; padding: 0px!important; font-size: 0.9em;}
 
 nav.categorias{}
 
 .menu-soria{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 background-color: #fff;
 color: #333;
 font-size: 1.5em;
@@ -352,13 +359,26 @@ padding: 0.5em;
 width: 100%;
 text-align: center;
 display: inline-block;
-margin: 0px auto;}
+margin: 0px auto;
+border-top: 1px solid #C61C35;
+border-bottom: 1.2px solid #C61C35;}
 
 .menu-soria ul{  text-align: center; margin:0px;}
 
-.menu-soria ul li{border-color: #7f7f7f; border-style: solid; border-width: thin; background-color: #a1a1a1; text-align: center; display: inline-block; margin: 5px auto; list-style-type: none; line-height:3; margin: 10px 15px; padding: 0px 10px 0px 10px;-webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;}
+.menu-soria ul li{
+display: inline-block;
+border-bottom: 2px #C61C35 solid;
+color: #333;
+font-weight: normal;
+list-style-type: none;
+line-height: 3;
+margin: 0px 45px 10px 45px;
+padding: 0px 10px 0px 10px;
+}
+
+.menu-soria ul li:hover{
+border-bottom: 2px #333 solid;
+}
 
 .menu-soria ul li.logo{ width: 400px;
 margin: 0px 210px 0px 10px;
@@ -415,7 +435,7 @@ height: 180px;
 margin: auto;
 display: inline-block;}
 
-.footer-producto{font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
+.footer-producto{font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
 
 small.footer-producto{display: inline-block;
 width: 100%;
@@ -453,12 +473,13 @@ span.copyright{float: left; margin-left: 11%}
 
 .top-title{float: left; padding: 0px; width: 100%; margin: 10px auto;}
 
-.top-title h2{margin: 0px; padding: 0px;}
+.top-title h2{margin: 0px; padding: 0px 0px 0px 25px; border-bottom: solid 2px #C61C35;}
 
 .navigation{margin-right: 10px;}
 
 .tabla-detalles{}
 
+.content{display: block; clear: both; float: left; width: 100%;}
 .content-producto{}
 
 .slider-producto{}
@@ -500,6 +521,9 @@ margin: 0.1em;}
 
 .submit{float: right; margin: 5px 0px 0px 0px}
 
+input[type="search"]{font-family:'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-weight: lighter;}
+
 ul.datos-contacto{}
 
 ul.datos-contacto li{width: 100%; list-style-type: none;}
@@ -514,11 +538,17 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 
 .historia{text-align: justify; margin: 2em auto;}
 
-.nosotros{text-align: justify; margin: 2em auto;}
+.nosotros{text-align: justify; margin: 2em auto; float: left;}
 
-.mision{text-align: justify; margin: 2em 0.3em;}
+.mision{text-align: justify; margin: 2em 0.3em; float:left;}
 
-.vision{text-align: justify; margin: 2em 0.3em;}
+.mision h2{float: left;}
+
+.vision{text-align: justify; margin: 2em 0.3em; float: left;}
+
+.vision h2{float: left;}
+
+.gallery{float: left; width: 100%;}
 
 /*****************NAVEGACION DE CATEGORIAS************/
 
@@ -536,14 +566,13 @@ background-color: #646569;
     color: #fff;
 }
 
-ul.nav-li{display: inline-table; margin: 0px auto;}
+ul.nav-li{display: inline-table; margin: 0px auto!important;}
+
 .nav-li {
     list-style: none;
      *zoom: 1;
      background:#646569;
      display: inline-block;
-     float: left;
- 
      text-align: center;
 }
 .nav-li:before,
@@ -597,10 +626,19 @@ padding: 0px 0.5em;
 background: #646569;
 position: relative;
 z-index: 100;
-border-top: 1px solid #fff;
+border-top: 1px solid #3c3c3c;
+border-left: 1px solid #3c3c3c;
+border-right: 1px solid #3c3c3c;
 padding: 0.2em;
 font-size: 0.8em;
+width: 200px;
+text-align: left;
 }
+
+.nav-li li li a:last-child {
+border-bottom: 2px solid #C61C35;
+}
+
 .nav-li li li li a {
     background:#249578;
     z-index:200;

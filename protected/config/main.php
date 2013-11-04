@@ -76,7 +76,7 @@ return array(
 			//'password' => 'lamisma00',
 			//servidor rainfinitum
 			'username'=>'root',
-			'password'=>'R41n0v4c10n',
+			'password'=>'admin',
 			//accesos locales
 			 //'username'=>'root',
 			 //'password'=>'',
