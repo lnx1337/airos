@@ -1,15 +1,5 @@
 <ul class="productos-random">
-<?php 
 
- $this->widget('zii.widgets.CListView', array(
-        'dataProvider'=>$dataProvider,
-        'itemView'=>'_viewAll',
-        'ajaxUpdate'=>true,
-        'ajaxUrl'=>$this->createUrl('Productos/search')
-
-
-        ));
-?>
 </ul>
 <div id="borra">
 <span class="top-title"><h2>¿Quiénes somos?</h2></span>

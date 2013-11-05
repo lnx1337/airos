@@ -278,7 +278,7 @@ $model->attributes=$_POST['Cuentas'];
 		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$_SESSION['dataProvider'].'%" OR clave LIKE "%'.$_SESSION['dataProvider'].'%"','order'=>'id DESC')));
          
          
- $this->renderPartial('_SearchResponse',array('dataProvider'=>$dataProvider,))
+         $this->renderPartial('_SearchResponse',array('dataProvider'=>$dataProvider,),false,true);
          /*
          echo '<link rel="stylesheet" type="text/css" href="/airos/assets/e9958da0/listview/styles.css" />';
 		 $this->widget('zii.widgets.CListView', array(
