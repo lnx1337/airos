@@ -30,20 +30,14 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
 		
-		/*
-         
-        $modelContenido= Contenido::model()->find(array('condition'=>'posiciones_id=1'));
-        $modelNuevos=Productos::model()->findAll(array('order'=>'id Desc','limit'=>3));	
-		$modelProductos= Productos::model()->findAll(array('order'=>' RAND()','limit'=>5));
-		$this->render('index',array('modelProductos'=>$modelProductos,'modelContenido'=>$modelContenido,'modelNuevos'=>$modelNuevos)); 
-      */
-     
+		
 		$dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'RAND()','limit'=>12)));
-
+       
+       
 		  $this->render('index',array(
-		    	'dataProvider'=>$dataProvider,
-
+		    	'dataProvider'=>$dataProvider
 		  ));
+
 
 		  
 	}
