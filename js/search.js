@@ -14,7 +14,7 @@ $(function() {
 
 
 
-$( "#search" ).keypress(function( event ) {
+$("#search").keypress(function( event ) {
   if ( event.which == 13 ) {
        
          event.preventDefault();
@@ -35,7 +35,6 @@ $( "#search" ).keypress(function( event ) {
   
 
   });
-
 
 
 $(document).keypress(function(e) {

@@ -270,20 +270,22 @@ $model->attributes=$_POST['Cuentas'];
 
 	public function actionSearch(){
 
-        if(isset($_POST['search'])){
-		     $s=$_POST['search'];
-		     $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$s.'%" OR clave LIKE "%'.$s.'%"','order'=>'id DESC')));
-			 $this->widget('zii.widgets.CListView', array(
+         if(isset($_POST['search'])){
+                 $s=$_POST['search'];
+                 $_SESSION['dataProvider']=$s;
+         }
+		     
+		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$_SESSION['dataProvider'].'%" OR clave LIKE "%'.$_SESSION['dataProvider'].'%"','order'=>'id DESC')));
+
+		 $this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProvider,
 				'itemView'=>'_viewAll',
-             ));
-			 
-	    }
-/*
-$s=$_GET['s'];
-		     $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion LIKE "%'.$s.'%" OR clave LIKE "%'.$s.'%"','order'=>'id DESC')));
-			 $this->render('partial',array('dataProvider'=>$dataProvider),false,true);
-			 */
+				'ajaxUpdate'=>false,
+				'ajaxUrl'=>$this->createUrl('Productos/search')
+
+
+        ));
+
 
 	}
 

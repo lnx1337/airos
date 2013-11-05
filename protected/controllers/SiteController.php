@@ -54,8 +54,11 @@ class SiteController extends Controller
 	}
 
 	public function actionNosotros(){
+
+
+		$dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'RAND()','limit'=>1)));
         $modelContenido= Contenido::model()->findAll(array('condition'=>'posiciones_id in (1,2,3,4)'));
-		$this->render('nosotros',array('modelContenido'=>$modelContenido));
+		$this->render('nosotros',array('modelContenido'=>$modelContenido,'dataProvider'=>$dataProvider));
 	}
 
 	public function actionContacto(){
