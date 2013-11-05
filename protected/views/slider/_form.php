@@ -30,9 +30,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estatus'); ?>
-		<?php echo $form->textField($model,'estatus'); ?>
+		<?php echo CHtml::dropDownList('Slider[estatus]', 'estatus', array('1'=>'Activo','0'=>'Inactivo',),array('empty' => '(Seleccione)')); ?>
 		<?php echo $form->error($model,'estatus'); ?>
 	</div>
+
+
+	    
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

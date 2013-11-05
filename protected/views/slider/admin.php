@@ -33,8 +33,11 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'imagen',
-		'estatus',
+      array(        
+          'name'=>'imagen',
+          'value'=>'CHtml::image(Yii::app()->request->baseUrl."/images/".$data->imagen,"imagen",array(\'width\'=>200, \'height\'=>200))',
+          'type'=>'raw',
+       ),		'estatus',
 		array(
 			'class'=>'CButtonColumn',
 		),
