@@ -75,11 +75,11 @@ return array(
 			//'username' => 'acero_soria',
 			//'password' => 'lamisma00',
 			//servidor rainfinitum
-			//'username'=>'root',
-			//'password'=>'admin',
+			'username'=>'root',
+			'password'=>'admin',
 			//accesos locales
-			 'username'=>'root',
-			 'password'=>'',
+			 //'username'=>'root',
+			 //'password'=>'',
 			'charset' => 'utf8',
 		),
 

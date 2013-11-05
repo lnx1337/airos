@@ -18,17 +18,19 @@
               echo $modelContenido[1]->contenido; ?>
       </p>
 
-<h2>Misión</h2>
+
 
 <span class="col_6 mision">
+  <h2>Misión</h2>
        <p><?php  if(isset($modelContenido[2]))
                        echo $modelContenido[2]->contenido; ?>
        </p>
 
 </span>
 
-<h2>Visión</h2>
+
 <span class="col_6 vision">
+  <h2>Visión</h2>
        <p><?php   	if(isset($modelContenido[3]))
                             echo $modelContenido[3]->contenido; ?>
           </p>
