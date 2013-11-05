@@ -233,6 +233,16 @@ li.group h3{color: #fff;}
 		line-height:100%;
 		font-size: 1.2em;
 		}
+
+		i.social-img{float: left;
+width: 30px;
+height: auto;
+padding: 0px 1px;
+margin: 0px;
+display: inline-block}
+		i.social-img img{float: left; width: 100%; height: auto;}
+		.social{display: inline-block;}
+		.social-buttons{padding: 0px; margin: 0px; display: block;}
 		
 .callout{
 background:#4598ef;/*#86dc00;*/
@@ -540,13 +550,15 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 
 .nosotros{text-align: justify; margin: 2em auto; float: left;}
 
+.nostros h2{float: left; width: 100%; display: inline-block;}
+
 .mision{text-align: justify; margin: 2em 0.3em; float:left;}
 
-.mision h2{float: left;}
+.mision h2{float: left; width: 100%; display: inline-block;}
 
 .vision{text-align: justify; margin: 2em 0.3em; float: left;}
 
-.vision h2{float: left;}
+.vision h2{float: left; width: 100%; display: inline-block;}
 
 .gallery{float: left; width: 100%;}
 

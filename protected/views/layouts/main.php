@@ -52,13 +52,17 @@ $(document).ready(function(){
 <ul>
 <li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase red"></i><small>Nosotros</small></li></a>
-<li>
-<a href="https://twitter.com/acerossoria" target="_blank"><i class="icon-twitter"></i></a>
-<a href="https://www.facebook.com/acerossoria" target="_blank"><i class="icon-facebook"></i></a>
-<a href="https://plus.google.com/114038653456290361525/posts" target="_blank"><i class="icon-google-plus"></i></a>
-</li>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/contacto" class="blanco"><li><i class="icon-envelope-alt red"></i><small>Contacto</small></li></a>
+<li class="social-buttons"><span class="social">
+<a href="https://twitter.com/acerossoria" target="_blank"><i class="social-img">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/twtt.png"></i></a>
+<a href="https://www.facebook.com/acerossoria" target="_blank"><i class="social-img">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/feis.png"></i></a>
+<a href="https://plus.google.com/114038653456290361525/posts" target="_blank"><i class="social-img">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gogole.png"></i></a>
+</span></li>
 </ul>
+
 <span class="garantia"><i class="icon-truck"></i><small> Garantía de entrega, <strong>Entregamos antes de 24hrs</strong> (sujeto a disponibilidad)</small></span>
 </div>
 <div class="container-nav">
