@@ -1,12 +1,12 @@
 <?php
 
-class ProductosController extends Controller
+class SliderController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/main';
+	public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -28,7 +28,7 @@ class ProductosController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','Linea','otro','sublinea','search','autocom'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,9 +51,9 @@ class ProductosController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$model=$this->loadModel($id);
-		$modelRelacionados=Productos::model()->findAll(array('condition'=>'sublinea_id='.$model->sublinea_id));
-		$this->render('view',array('model'=>$model,'modelRelacionados'=>$modelRelacionados));
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
 	}
 
 	/**
@@ -62,19 +62,18 @@ class ProductosController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Productos;
+		$model=new Slider;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Productos']))
+		if(isset($_POST['Slider']))
 		{
-		     
-	        $filename=uniqid().'.jpg';
-			$_FILES['Productos']['name']['imagen']=$filename;
+            $filename=uniqid().'.jpg';
+			$_FILES['Slider']['name']['imagen']=$filename;
             $model->imagen=CUploadedFile::getInstance($model,'imagen');
-            $filepath= Yii::app()->basePath.'/../PrinprodImages/'.$filename;
-			$model->attributes=$_POST['Productos'];
+            $filepath= Yii::app()->basePath.'/../images/'.$filename;
+			$model->attributes=$_POST['Slider'];
 
 			if($model->save()){
 		        $model->imagen->saveAs($filepath);
@@ -100,37 +99,30 @@ class ProductosController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Productos']))
+		if(isset($_POST['Slider']))
 		{
-			$model->attributes=$_POST['Productos'];
 			
-          if( $_FILES['Productos']['name']['imagen'] !=null){
+             
+             if( $_FILES['Slider']['name']['imagen'] !=null){
                
                $filename=$model->imagen;
                
                if($model->imagen!=null)
-               if(file_exists(Yii::app()->basePath.'/../PrinprodImages/'.$filename)){     
-	                    unlink(Yii::app()->basePath.'/../PrinprodImages/'.$filename);	
-	              }				
+	               if(file_exists(Yii::app()->basePath.'/../images/'.$filename)){   
+		                    unlink(Yii::app()->basePath.'/../images/'.$filename);	
+		            }
 						$filename=uniqid().'.jpg';
-			            $_FILES['Productos']['name']['imagen']=$filename;
+			            $_FILES['Slider']['name']['imagen']=$filename;
                         $model->imagen=CUploadedFile::getInstance($model,'imagen');
-                        $filepath= Yii::app()->basePath.'/../PrinprodImages/'.$filename;
-			            $model->attributes=$_POST['Productos'];
+                        $filepath= Yii::app()->basePath.'/../images/'.$filename;
+			            $model->attributes=$_POST['Slider'];
 						
 						if($model->save()){
 					        $model->imagen->saveAs($filepath);
 							$this->redirect(array('view','id'=>$model->id));
 						}	
-
-			}else{
-
-                if($model->save()){
-			       $this->redirect(array('view','id'=>$model->id));
-			    }
+	           
 			}
-
-
 
 		}
 
@@ -138,17 +130,6 @@ class ProductosController extends Controller
 			'model'=>$model,
 		));
 	}
-
-
-	/*
-
-
-$model->attributes=$_POST['Cuentas'];
-
-			
-			
-
-	*/
 
 	/**
 	 * Deletes a particular model.
@@ -169,124 +150,25 @@ $model->attributes=$_POST['Cuentas'];
 	 */
 	public function actionIndex()
 	{
-
-
-
-		if(isset($_GET['Productos']['s'])){
-
-		     $s=$_GET['Productos']['s'];
-		     $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion LIKE "%'.$s.'%" OR clave LIKE "%'.$s.'%"','order'=>'id DESC')));
-			 
-			 $this->render('index',array(
-			'dataProvider'=>$dataProvider,
-
-		     ));
-
-		}else{
-
-         $dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'descripcion_producto')));
-
-		  $this->render('index',array(
-		    	'dataProvider'=>$dataProvider,
-
-		  ));
-
-		}
-			 
-
-
-		
-		
-	}
-
-    public function actionSublinea($id){
-
-         $dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'descripcion_producto','condition'=>'sublinea_id='.$id)));
-
-		  $this->render('sublinea',array(
-		    	'dataProvider'=>$dataProvider,
-
-		  ));
-		 
-
-
-   } 
-
-
-
-
-
-  public function actionLinea($id){
-  	
-		$dataProvider=new CActiveDataProvider('Productos',array(
-						'pagination' => array('pageSize' => 8),
-						'criteria'=>array('condition'=>'linea_id="'.$id.'"')));
-
+		$dataProvider=new CActiveDataProvider('Slider');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-
 		));
-  }
+	}
 
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		$model=new Productos('search');
+		$model=new Slider('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Productos']))
-			$model->attributes=$_GET['Productos'];
+		if(isset($_GET['Slider']))
+			$model->attributes=$_GET['Slider'];
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
-	}
-
-	public function actionOtro(){
-
-
-		print_r($_POST);
-	}
-
-
-    public function actionAutocom(){
-
-        $json=array();
-        if(isset($_GET['term'])){
-        	
-        	$modelAuto= Productos::model()->findAll(array('condition'=>' descripcion_producto LIKE "%'.$_GET['term'].'%"'));
-
-        	foreach ($modelAuto as $key => $value) {
-               $json[]=$value->descripcion_producto;
-         	}
-
-        	echo json_encode($json);
-		 	 
-	    }
-
-}
-
-
-	public function actionSearch(){
-
-         if(isset($_POST['search'])){
-                 $s=$_POST['search'];
-                 $_SESSION['dataProvider']=$s;
-         }
-		     
-		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$_SESSION['dataProvider'].'%" OR clave LIKE "%'.$_SESSION['dataProvider'].'%"','order'=>'id DESC')));
-
-		 $this->widget('zii.widgets.CListView', array(
-				'dataProvider'=>$dataProvider,
-				'itemView'=>'_viewAll',
-				'ajaxUpdate'=>false,
-				'ajaxUrl'=>$this->createUrl('Productos/search')
-
-
-        ));
-
-
 	}
 
 	/**
@@ -296,7 +178,7 @@ $model->attributes=$_POST['Cuentas'];
 	 */
 	public function loadModel($id)
 	{
-		$model=Productos::model()->findByPk($id);
+		$model=Slider::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -308,7 +190,7 @@ $model->attributes=$_POST['Cuentas'];
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='productos-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='slider-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

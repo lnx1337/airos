@@ -26,7 +26,7 @@
 		<?php echo $form->error($model,'descripcion'); ?>
 	    <br>
         <br>
-	<?php if(isset($model->imagen)){
+	    <?php if(isset($model->imagen)){
          echo '<div>Imagen Actual <img src="'.Yii::app()->request->baseUrl.'/lineasImages/'.$model->imagen.'"   heigth="100"  width="100" /></div><label>Actualizar Imagen</label>';
          ?>
 

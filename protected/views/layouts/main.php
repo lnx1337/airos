@@ -15,7 +15,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" media="all" /> 
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
-
  <script>
 $(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
@@ -132,12 +131,13 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <!--este slider será administrable y aparecerán productos random (Maximo 5 elementos)-->
 <div id="slider">
 <ul class="slideshow">
-<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider1.jpg" width="960" height="600" /></a></li>
-<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider2.jpg" width="960" height="600" /></a></li>
-<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider3.jpg" width="960" height="600" /></a></li>
-<li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sslider4.jpg" width="960" height="600" /></a></li>
+	<?php 
 
+    $modelSlider=Slider::model()->findAll();
+	foreach($modelSlider as $key => $value) { ?>
+       <li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/<?php echo $value->imagen; ?>" width="960" height="600" /></a></li>
 
+	<?php } ?>
 </ul>
 </div>
 
@@ -152,10 +152,7 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <div class="content-productos">
 <div class="col_12">
 
-
-
  <?php echo $content; ?>
-
 
 </div>
 </div>

@@ -1,5 +1,8 @@
+<ul class="productos-random">
+</ul>
 
-<span class="top-title"><h2>Nosotros</h2></span>
+<div id="borra">
+<span class="top-title"><h2>¿Quiénes somos?</h2></span>
 <div class="grid">
 <h2>Historia</h2>
 <article class="historia">
@@ -11,6 +14,7 @@
 
 	 </p>
 </article>
+<h2>Nosotros</h2>
 
 <article class="nosotros">
        <p><?php 
@@ -37,6 +41,8 @@
 
 </span>
 </article>
+
+</div>
 
 <!-- Gallery -->
 <div class="gallery center">
