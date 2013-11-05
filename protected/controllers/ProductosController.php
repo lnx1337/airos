@@ -276,15 +276,21 @@ $model->attributes=$_POST['Cuentas'];
          }
 		     
 		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$_SESSION['dataProvider'].'%" OR clave LIKE "%'.$_SESSION['dataProvider'].'%"','order'=>'id DESC')));
-
+         
+         
+ $this->renderPartial('_SearchResponse',array('dataProvider'=>$dataProvider,))
+         /*
+         echo '<link rel="stylesheet" type="text/css" href="/airos/assets/e9958da0/listview/styles.css" />';
 		 $this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProvider,
 				'itemView'=>'_viewAll',
-				'ajaxUpdate'=>false,
+				'ajaxUpdate'=>true,
 				'ajaxUrl'=>$this->createUrl('Productos/search')
 
 
         ));
+
+        */
 
 
 	}
