@@ -1,14 +1,8 @@
 <ul class="productos-random">
-<?php $this->widget('zii.widgets.CListView', array(
-              'dataProvider'=>$dataProvider,
-              'itemView'=>'_viewAll',
-              'ajaxUpdate'=>false,
-
- )); ?>
 </ul>
 
 <div id="borra">
-<span class="top-title"><h2>Nosotros</h2></span>
+<span class="top-title"><h2>¿Quiénes somos?</h2></span>
 <div class="grid">
 <h2>Historia</h2>
 <article class="historia">
@@ -20,6 +14,7 @@
 
 	 </p>
 </article>
+<h2>Nosotros</h2>
 
 <article class="nosotros">
        <p><?php 

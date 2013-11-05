@@ -32,7 +32,7 @@
                                             <div class="controls">
 
                                             <?php echo $form->labelEx($modelHistoria,'contenido'); ?>
-                                            <?php echo $form->textArea($modelHistoria,'contenido',array('rows'=>15,'id'=>'txt_home')); ?>
+                                            <?php echo $form->textArea($modelHistoria,'contenido'); ?>
                                             <?php echo $form->error($modelHistoria,'contenido'); ?>
                                           </div> 
                                            <h5>Editando: Texto de Nosotros Nosotros</h5>

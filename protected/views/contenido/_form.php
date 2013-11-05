@@ -16,7 +16,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 		<?php echo $form->labelEx($model,'contenido'); ?>
-		<?php echo $form->textArea($model,'contenido',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textArea($model,'contenido'); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 
 		<?php echo $form->labelEx($model,'posiciones_id'); ?>
