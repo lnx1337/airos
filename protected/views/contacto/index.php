@@ -1,3 +1,5 @@
+<?php $this->renderPartial('/admin/menu'); ?>
+
 <?php
 /* @var $this ContactoController */
 /* @var $dataProvider CActiveDataProvider */

@@ -99,4 +99,19 @@ class Contacto extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function getProductos($model){
+        
+         $Productos="";
+         $count=1;
+        foreach ($model->Productos as $key => $value) {
+        	$Productos.= $count.".-  Clave: ".$value->clave.' Producto:'.$value->producto.". <br>";
+        	$count++;
+
+        }
+
+
+        return $Productos;
+ 
+	}
 }

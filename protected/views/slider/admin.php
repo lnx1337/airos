@@ -14,6 +14,12 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
+
+
+$this->menu=array(
+	array('label'=>'Crear Slider', 'url'=>array('create')),
+);
+
 ?>
 
 <h1>Administrar Sliders</h1>
