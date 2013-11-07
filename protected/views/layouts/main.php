@@ -47,7 +47,7 @@ $(document).ready(function(){
 <div class="datos">
 <span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: (55)-5692-1000</small></span>
 <span class="buscador col_6">
- <a href="#resultados"><i class="icon-search right"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
+ <a href="#resultados"><i class="icon-search right" style="color:#fff!important;"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
 <ul>
 <li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
@@ -147,9 +147,9 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 
 
 
-<div class="content shadow" id="resultados">
+<div class="content shadow">
 <div class="grid">
-<div class="content-productos">
+<div class="content-productos" id="resultados">
 <div class="col_12">
 
  <?php echo $content; ?>
