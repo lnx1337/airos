@@ -30,18 +30,10 @@
                     <h3>Administrar Secciones</h3>
                     <ul>
                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/admin/nosotros">Adm. Nosotros</a></li>
-                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/slider/admin">Adm. Slider</a>
+                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/slider/admin">Adm. Slider</a></li>
+                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/Contacto/admin">Adm. Contactos</a></li>
                     </ul>
                     </li>
-
-                    <li class="group">
-                    <h3>Administrar Contactos</h3>
-                    <ul>
-                   <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/Contacto/admin">Adm. Contactos</a></li>
-                    </ul>
-                    </li>
-                 </ul>
-
 
          </div>
 
