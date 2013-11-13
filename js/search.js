@@ -14,6 +14,8 @@ $(function() {
 
 
 
+
+
 $("#search").keypress(function( event ) {
   if ( event.which == 13 ) {
        
@@ -26,9 +28,21 @@ $("#search").keypress(function( event ) {
                      url: "/airos/index.php/productos/search",
                      success: function(data){
                        $('.productos-random').html(data);
+                       $target = $(".list-view");
+                       $('html, body').stop().animate({
+                       
+                          'scrollTop': $target.offset().top
+                       
+                       }, 900, 'swing', function () {
+                          window.location.hash = $target;
+                          return false;
+                       });
+                       return false;
+
+
                     }
                   });
-
+              return false;
             }
 
           }
@@ -56,6 +70,17 @@ if(textSearch.length > 0 && textSearch != null){
            url: "/airos/index.php/productos/search",
            success: function(data){
              $('.productos-random').html(data);
+
+                       $target = $(".list-view");
+                       $('html, body').stop().animate({
+                          'scrollTop': $target.offset().top
+                       }, 900, 'swing', function () {
+                          window.location.hash = $target;
+                          return false;
+                       });
+                       return false;
+
+
           }
         });
 

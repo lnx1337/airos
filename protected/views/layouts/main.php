@@ -63,7 +63,7 @@ $(document).ready(function(){
 </span></li>
 </ul>
 
-<span class="garantia"><i class="icon-truck"></i><small> Garantía de entrega, <strong>Entregamos antes de 24hrs</strong> (sujeto a disponibilidad)</small></span>
+<span class="garantia"><i class="icon-truck"></i><small> Garantía de entrega: <strong>En el transcurso de 24hrs</strong></small></span>
 </div>
 <div class="container-nav">
 
