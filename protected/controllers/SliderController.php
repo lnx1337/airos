@@ -121,7 +121,6 @@ class SliderController extends Controller
 					        $model->imagen->saveAs($filepath);
 							$this->redirect(array('view','id'=>$model->id));
 						}	
-	           
 			}
 
 		}
