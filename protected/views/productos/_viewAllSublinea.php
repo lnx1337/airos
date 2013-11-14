@@ -19,8 +19,8 @@ if($data->imagen!=null){
 
 </span>
 <small class="footer-producto gris">
-<h6><?php echo $data->sublinea->linea->descripcion; ?></h6>
-<h5><?php echo  $data->descripcion_producto; ?></h5>
+<h6><?php echo  $data->descripcion_producto; ?></h6>
+<h5><?php echo $data->sublinea->linea->descripcion; ?></h5>
 <p><!--máximo 150 caracteres-->
 <?php echo  $data->producto; ?>
 </p>
