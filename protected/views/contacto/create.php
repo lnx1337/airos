@@ -41,11 +41,11 @@ src="https://maps.google.com.mx/maps/ms?ie=UTF8&amp;hq=&amp;hnear=%2B19%C2%B0+19
 
 <span class="footer-mapa">
 <address>
-Av. Benito Juárez # 265<br>
-Esq. Plutarco Elias Calles<br>
-Col. Presidentes de México<br>
-C.P. 09740
-Iztapalapa, DF
+Av. Benito Juárez # 265
+ Esq. Plutarco Elias Calles
+ Presidentes de México
+ C.P. 09740
+ Iztapalapa, DF
 
 </address>
 </span>
@@ -57,10 +57,10 @@ src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&a
 
 <span class="footer-mapa">
 <address>
-Av. Del Árbol Mz. 10 Lt. 21<br>
-Col. Consejo Agrarista Mexicano<br>
-C.P. 09760
-Iztapalapa, DF
+Av. Del Árbol Mz. 10 Lt. 21
+ Col. Consejo Agrarista Mexicano
+ C.P. 09760
+ Iztapalapa, DF
 </address>
 </span>
 </span>
@@ -71,11 +71,11 @@ src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&a
 
 <span class="footer-mapa">
 <address>
-Av. 8 (Francisco Morazán) # 19<br>
-Esq. Boulevard Puerto Aéreo<br> 
-Col. Ignacio Zaragoza<br>
-C.P. 15000
-Venustiano Carranza, DF
+Av. 8 (Francisco Morazán) # 19
+ Esq. Boulevard Puerto Aéreo
+ Col. Ignacio Zaragoza
+ C.P. 15000
+ Venustiano Carranza, DF
 
 </address>
 </span>

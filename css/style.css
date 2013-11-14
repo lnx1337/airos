@@ -122,7 +122,7 @@ background:#fff;}
 	}
 	
 	
-#ui-id-1{z-index:9999;}	
+#ui-id-1{z-index:9999;overflow: auto; max-height: 780px; height: 700px;}	
 	
 /* NAV BAR*/
 .navbar{
@@ -329,13 +329,14 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3
 
 #slider{width: 100%;
 margin: 0 auto;
-height: 420px;
+height: 520px;
+max-height: auto;
 padding: 0;
 overflow: hidden;
 float:left;
 display:block;}
 
-#slider img{width: 100%; height: auto;}
+#slider img{width: 100%;}
 
 .fixed{position:fixed;}
 
@@ -383,7 +384,7 @@ color: #333;
 font-weight: normal;
 list-style-type: none;
 line-height: 3;
-margin: 0px 40px 10px 40px;
+margin: 0px 30px 10px 30px;
 padding: 0px;
 }
 
@@ -547,6 +548,8 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 
 .mapas span.mapa{display: inline-table; background-color: #f3f3f3; height: 270px; text-align: justify;}
 
+span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bottom: solid #333 1px;}
+
 .footer-mapa{padding: 0px 2em; float: left;}
 
 .historia{text-align: justify; margin: 2em auto;}
@@ -688,7 +691,9 @@ border-bottom: 1.5px solid #3c3c3c;
    .nav-li > li.hover > ul , .nav-li li li.hover ul {
         position: static;
     }
-    .menu-soria{display: none;}
+    .menu-soria, #slider{display: none;}
+
+
 
 }
 

@@ -51,6 +51,7 @@ $(document).ready(function(){
 <div class="menu-soria">
 <ul>
 <li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index" class="blanco"><li><i class="icon-home red"></i><small>Inicio</small></li></a>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase red"></i><small>Nosotros</small></li></a>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/contacto" class="blanco"><li><i class="icon-envelope-alt red"></i><small>Contacto</small></li></a>
 <li class="social-buttons"><span class="social">
