@@ -90,25 +90,21 @@ foreach ($modelLineas as $key => $valueLineas) {
 
 <?php
 
+$lineas=array('PA'=>'Alambres','PF'=>'Fierro','PE'=>'Estructurales','PTU'=>'Tuberias','PTA'=>'Tableros','PTI'=>'Tiras','PL'=>'Laminas','PMA'=>'Mallas','PME'=>'Metales','PR'=>'Regillas','PPE'=>'Perfiles','PPL'=>'Placas','PPTR'=>'PTR','PC'=>'Construcción');
+$lista=null;
 $i=1;
-
-foreach ($lista as $key => $valueLineas) {
-	echo '<li class="test" ><a href="#">'.$valueLineas['descripcion'].'</a>';
-	
-	echo '<ul>';
-		foreach ($valueLineas['sublineas'] as $key => $valueSublinea) {
-			
-			echo '<li><a href="'.Yii::app()->request->baseUrl.'/index.php/Productos/Sublinea/'.$valueSublinea['sublinea_id'].'"  >'.$valueSublinea['descripcion'].'</a></li>';
+foreach ($lineas as $key => $value) {
+       $lista=Yii::app()->db->createCommand('select * from tbl_lineas where clave like "'.$key.'%"')->queryAll();
+       echo '<li class="test" ><a href="#">'.$value.'</a>';
+	   echo '<ul>';
+		foreach ($lista as $key => $valueLinea) {	
+			echo '<li><a href="'.Yii::app()->request->baseUrl.'/index.php/Productos/Linea/'.$valueLinea['id'].'"  >'.$valueLinea['descripcion'].'</a></li>';
 		}
      echo "</ul></li>";		
-
-
-   if($i>=9){
+   if($i>=15){
    	break;
    } 
-
-
-       $i++;
+     $i++; 
 }
 
 

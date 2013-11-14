@@ -201,9 +201,9 @@ $model->attributes=$_POST['Cuentas'];
 
     public function actionSublinea($id){
 
-         $dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'descripcion_producto','condition'=>'sublinea_id='.$id)));
 
-		  $this->render('sublinea',array(
+         $dataProvider=new CActiveDataProvider('Productos',array('pagination' => array('pageSize' => 12),'criteria'=>array('order'=>'descripcion_producto','condition'=>'sublinea_id='.$id)));         
+		 $this->render('sublinea',array(
 		    	'dataProvider'=>$dataProvider,
 
 		  ));
@@ -217,15 +217,30 @@ $model->attributes=$_POST['Cuentas'];
 
 
   public function actionLinea($id){
-  	
+
+
+       $lista=Yii::app()->db->createCommand('select * from tbl_sublineas  where linea_id='.$id)->queryAll();
+       $ids=null; 
+       
+       foreach ($lista as $key => $value) {
+            $ids.=$value['id'].",";	   
+       }
+
+         $ids = substr($ids, 0, -1);
+
+  	  
 		$dataProvider=new CActiveDataProvider('Productos',array(
 						'pagination' => array('pageSize' => 8),
-						'criteria'=>array('condition'=>'linea_id="'.$id.'"')));
+						'criteria'=>array('condition'=>'sublinea_id in ('.$ids.')')));
+
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 
 		));
+		
+		
+	
   }
 
 	/**
