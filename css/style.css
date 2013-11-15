@@ -517,7 +517,11 @@ span.copyright{float: left; margin-left: 11%}
 .relacionados ul li{display: inline-block;
 list-style-type: none;
 float: left;
-margin: 0.1em;}
+margin: 0.1em; position: relative;}
+
+.relacionados ul li span{}
+
+span.span-rel{width: 100%; height: 30px; float: left; z-index: 100; position: absolute;}
 
 .relacionados ul li img{border: 0.3em #fff solid; width: 100%; height: auto;}
 
@@ -527,20 +531,28 @@ margin: 0.1em;}
 
 .campo label.sel{width: 100%;}
 
-.campo input{width: 70%;}
+.campo input{width: 70%; margin: 0.5em 0px;}
 
 .campo select{width:100%;}
 
 .campo textarea{width: 100%; max-height: 100px;}
 
-.submit{float: right; margin: 5px 0px 0px 0px}
+.submit{float: right; margin: 10px 0px 0px 0px}
 
 input[type="search"]{font-family:'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 font-weight: lighter;}
 
-ul.datos-contacto{}
+ul.datos-contacto{
+font-size: 1.2em;
+background-color: #fff;
+padding: 1em;
+margin: 0px;
+border: inset 1px #C61C35;
+}
 
-ul.datos-contacto li{width: 100%; list-style-type: none;}
+ul.datos-contacto li{width: 100%; list-style-type: none; }
+
+
 
 .mapas{width: 100%; display: inline-block;}
 
@@ -551,6 +563,8 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bottom: solid #333 1px;}
 
 .footer-mapa{padding: 0px 2em; float: left;}
+
+.footer-mapa address{font-size: 1.1em; padding: 0.2em; margin: 5px auto;}
 
 .historia{text-align: justify; margin: 2em auto;}
 
@@ -693,6 +707,12 @@ border-bottom: 1.5px solid #3c3c3c;
     }
     .menu-soria, #slider{display: none;}
 
+.telefono{float: left; clear: both; font-size: 1em; width: 100%}
+
+.buscador{float: left; width: 90%; height: 20px; font-size: 1em;}
+
+.buscador i{float: right; margin: 0px 5px 0px 0px; line-height: 1.5;}
+.garantia{display: none;}
 
 
 }

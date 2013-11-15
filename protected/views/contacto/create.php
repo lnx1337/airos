@@ -8,7 +8,7 @@ if(isset($_GET['sk'])){
 
 <span class="top-title"><h2>Contáctanos</h2></span>
 <article>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p></p>
 </article>
 <article class="contacto col_6">
 
@@ -41,11 +41,11 @@ src="https://maps.google.com.mx/maps/ms?ie=UTF8&amp;hq=&amp;hnear=%2B19%C2%B0+19
 
 <span class="footer-mapa">
 <address>
-Av. Benito Juárez # 265
+<a href="https://www.google.com/maps/preview#!q=Av+Benito+Ju%C3%A1rez%2C+Presidentes+de+M%C3%A9xico%2C+Iztapalapa%2C+Mexico+City%2C+Mexico&data=!4m15!2m14!1m13!1s0x85ce0289843ef669%3A0x3eaf13f871c2a54d!3m8!1m3!1d2600!2d-76.9902112!3d38.8823887!3m2!1i1366!2i643!4f13.1!4m2!3d19.3321604!4d-99.0576528" target="_blank">Av. Benito Juárez # 265
  Esq. Plutarco Elias Calles
  Presidentes de México
  C.P. 09740
- Iztapalapa, DF
+ Iztapalapa, DF</a>
 
 </address>
 </span>
@@ -57,10 +57,10 @@ src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&a
 
 <span class="footer-mapa">
 <address>
-Av. Del Árbol Mz. 10 Lt. 21
+<a href="https://www.google.com/maps/preview#!q=Av+del+arbol+agrarista&data=!4m15!2m14!1m13!1s0x85ce028ab704172b%3A0xb86b6e5d4c52457c!3m8!1m3!1d3152!2d-99.0653202!3d19.3149837!3m2!1i1366!2i643!4f13.1!4m2!3d19.3208335!4d-99.0540822" target="_blank">Av. Del Árbol Mz. 10 Lt. 21
  Col. Consejo Agrarista Mexicano
  C.P. 09760
- Iztapalapa, DF
+ Iztapalapa, DF</a>
 </address>
 </span>
 </span>
@@ -71,12 +71,13 @@ src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&a
 
 <span class="footer-mapa">
 <address>
+<a href="https://www.google.com/maps/preview#!q=General+Francisco+Moraz%C3%A1n+(Av.+8)%2C+Ciudad+de+M%C3%A9xico%2C+D.F.%2C+Mexico&data=!1m4!1m3!1d6301!2d-99.0885826!3d19.4125035!4m15!2m14!1m13!1s0x85d1fc17fe75a37d%3A0x951b688268da9211!3m8!1m3!1d3152!2d-99.0545418!3d19.3216335!3m2!1i1366!2i643!4f13.1!4m2!3d19.4121369!4d-99.0897375" target="_blank">
 Av. 8 (Francisco Morazán) # 19
  Esq. Boulevard Puerto Aéreo
  Col. Ignacio Zaragoza
  C.P. 15000
  Venustiano Carranza, DF
-
+</a>
 </address>
 </span>
 </span>
