@@ -68,18 +68,21 @@ class SliderController extends Controller
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Slider']))
-		{
-            $filename=uniqid().'.jpg';
-			$_FILES['Slider']['name']['imagen']=$filename;
-            $model->imagen=CUploadedFile::getInstance($model,'imagen');
-            $filepath= Yii::app()->basePath.'/../images/'.$filename;
-			$model->attributes=$_POST['Slider'];
+		{   
+			if($_FILES['Slider']['name']['imagen']){
+				   $filename=uniqid().'.jpg';
+			       $_FILES['Slider']['name']['imagen']=$filename;
+				   $model->imagen=CUploadedFile::getInstance($model,'imagen');
+		            $filepath= Yii::app()->basePath.'/../images/'.$filename;
+					$model->attributes=$_POST['Slider'];
 
-			if($model->save()){
-		        $model->imagen->saveAs($filepath);
-				$this->redirect(array('view','id'=>$model->id));
+					if($model->save()){
+				        $model->imagen->saveAs($filepath);
+						$this->redirect(array('view','id'=>$model->id));
+					}
+			}else{
+				echo "no tiene";
 			}
-
 		}
 
 		$this->render('create',array(
@@ -101,7 +104,7 @@ class SliderController extends Controller
 
 		if(isset($_POST['Slider']))
 		{
-			
+			 
              
              if( $_FILES['Slider']['name']['imagen'] !=null){
                
@@ -121,6 +124,13 @@ class SliderController extends Controller
 					        $model->imagen->saveAs($filepath);
 							$this->redirect(array('view','id'=>$model->id));
 						}	
+			}else{
+
+			            $model->attributes=$_POST['Slider'];
+						if($model->save()){
+							$this->redirect(array('view','id'=>$model->id));
+						}	
+
 			}
 
 		}

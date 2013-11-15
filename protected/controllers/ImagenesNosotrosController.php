@@ -118,6 +118,13 @@ class ImagenesNosotrosController extends Controller
 					        $model->imagen->saveAs($filepath);
 							$this->redirect(array('view','id'=>$model->id));
 						}	
+			}else{
+
+			            $model->attributes=$_POST['ImagenesNosotros'];
+						if($model->save()){
+							$this->redirect(array('view','id'=>$model->id));
+						}	
+
 			}
 		
 
