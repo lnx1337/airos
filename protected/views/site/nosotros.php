@@ -46,18 +46,9 @@
 
 <!-- Gallery -->
 <div class="gallery center">
-<a href="http://placehold.it/600x450/4D99E0/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/75CC00/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/75CC00/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/E49800/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E49800/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/E4247E/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4247E/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/00C6E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/00C6E4/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/E4DB0F/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4DB0F/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/7400E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/7400E4/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/C50000/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/C50000/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/E4247E/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4247E/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/00C6E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/00C6E4/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/E4DB0F/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4DB0F/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/7400E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/7400E4/ffffff.png&text=100x100" width="100" height="100" /></a>
-<a href="http://placehold.it/600x450/C50000/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/C50000/ffffff.png&text=100x100" width="100" height="100" /></a>
+  <?php foreach ($modelImagesNosotros as $key => $value) { ?>
+  <a href="<?php echo Yii::app()->request->baseUrl; ?>/imagesNosotros/<?php echo $value->imagen; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imagesNosotros/<?php echo $value->imagen; ?>" width="100" height="100" /></a>
+  <?php } ?>
+
 </div>
 </div>
