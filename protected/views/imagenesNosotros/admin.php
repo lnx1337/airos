@@ -39,7 +39,7 @@ $('.search-form form').submit(function(){
 		'id',
        array(        
           'name'=>'imagen',
-          'value'=>'CHtml::image(Yii::app()->request->baseUrl."/images/".$data->imagen,"imagen",array(\'width\'=>200, \'height\'=>200))',
+          'value'=>'CHtml::image(Yii::app()->request->baseUrl."/imagesNosotros/".$data->imagen,"imagen",array(\'width\'=>200, \'height\'=>200))',
           'type'=>'raw',
        ),		'estatus',
 		array(
