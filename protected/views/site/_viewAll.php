@@ -16,7 +16,7 @@ if($data->imagen!=null){
      <?php  if(file_exists(getcwd().'/lineasImages/'.$data->sublinea->linea->clave.'.jpg')){ ?> 
                    <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/'.$data->sublinea->linea->clave.'.jpg'; ?>
      <?php }else { ?>
-                   <?php $imagen="http://placehold.it/300x180"; ?>
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/default.png'; ?>
      <?php } ?>
 <?php } ?>
 <img class="productosimg" src="<?php echo  $imagen; ?>" alt="producto" width="300" height="180" />

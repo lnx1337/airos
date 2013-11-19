@@ -130,7 +130,7 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 <ul class="slideshow">
 	<?php 
 
-    $modelSlider=Slider::model()->findAll();
+    $modelSlider=Slider::model()->findAll(array('condition'=>'estatus=1'));
 	foreach($modelSlider as $key => $value) { ?>
        <li><a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/<?php echo $value->imagen; ?>" width="960" height="600" /></a></li>
 

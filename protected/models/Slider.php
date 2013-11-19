@@ -38,6 +38,7 @@ class Slider extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('estatus', 'required'),
 			array('estatus', 'numerical', 'integerOnly'=>true),
 			array('imagen', 'file', 'types'=>'jpg, gif, png,','allowEmpty' => true),
 			// The following rule is used by search().
