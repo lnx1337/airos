@@ -79,7 +79,7 @@ return array(
 			//'password'=>'admin',
 			//accesos locales
 			 'username'=>'root',
-			 'password'=>'',
+			 'password'=>'admin',
 			'charset' => 'utf8',
 		),
 
