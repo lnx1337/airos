@@ -46,7 +46,7 @@ $(document).ready(function(){
 <div class="sticky_navigation">
 <div class="datos">
 <span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: (55)-5692-1000</small>
-<legend class="email_header">ventas@acerossoria.com</legend>
+<small class="email_header">ventas@acerossoria.com</small>
 </span>
 <span class="buscador col_6">
  <a href="#resultados"><i class="icon-search right" style="color:#fff!important;"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
@@ -125,11 +125,11 @@ foreach ($lineas as $key => $value) {
 
 <!-- ===================================== SLIDER ===================================== -->
 <!--este slider será administrable y aparecerán productos random (Maximo 5 elementos)-->
-<!--
+
 <?php 
 
 
-/*if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {?>
+if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {?>
 
 <div id="slider">
 <ul class="slideshow">
@@ -143,7 +143,7 @@ foreach ($lineas as $key => $value) {
 </ul>
 </div>
 
-<?php } ?>-->
+<?php } ?>
 
 <!-- ===================================== SLIDER ===================================== -->
 
