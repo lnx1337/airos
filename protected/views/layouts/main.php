@@ -45,13 +45,18 @@ $(document).ready(function(){
 <header>
 <div class="sticky_navigation">
 <div class="datos">
-<span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: (55)-5692-1000</small></span>
+<span class="col_6 telefono"><i class="icon-phone"></i> <small>Atención a clientes: (55)-5692-1000</small>
+<legend class="email_header">ventas@acerossoria.com</legend>
+</span>
 <span class="buscador col_6">
  <a href="#resultados"><i class="icon-search right" style="color:#fff!important;"></i></a><input id="search" type="search" class="auto" placeholder="Buscar Producto..." style="width:93%;" /></span></div>
 <div class="menu-soria">
 <ul>
 <li class="logo"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-top.png" alt="logo"></a></li>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/index" class="blanco"><li><i class="icon-home red"></i><small>Inicio</small></li></a>
+
+<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/Productos" class="blanco"><li><i class="icon-shopping-cart red"></i><small>Productos</small></li></a>
+
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/nosotros" class="blanco"><li><i class="icon-briefcase red"></i><small>Nosotros</small></li></a>
 <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/contacto" class="blanco"><li><i class="icon-envelope-alt red"></i><small>Contacto</small></li></a>
 <li class="social-buttons"><span class="social">
@@ -119,13 +124,13 @@ foreach ($lineas as $key => $value) {
 
 
 <!-- ===================================== SLIDER ===================================== -->
-
-
+<!--este slider será administrable y aparecerán productos random (Maximo 5 elementos)-->
+<!--
 <?php 
 
 
-if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {?>
-<!--este slider será administrable y aparecerán productos random (Maximo 5 elementos)-->
+/*if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {?>
+
 <div id="slider">
 <ul class="slideshow">
 	<?php 
@@ -138,7 +143,7 @@ if(Yii::app()->controller->id.Yii::app()->controller->action->id=='siteindex') {
 </ul>
 </div>
 
-<?php } ?>
+<?php } ?>-->
 
 <!-- ===================================== SLIDER ===================================== -->
 
