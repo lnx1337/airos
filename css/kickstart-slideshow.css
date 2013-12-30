@@ -2,6 +2,29 @@
 	SLIDESHOW2 - Slight Fixes for the slideshow layout *needs work
 -----------------------------------*/
 	
+	/*---------------------------------
+	SLIDESHOW2
+-----------------------------------*/
+.slideshow-wrap{
+clear:both;
+margin:0;
+padding:0;
+position:relative;
+top:0;
+left:0;
+overflow:hidden;
+clear:both;
+}
+
+	.slideshow-inner{
+	overflow:hidden;
+	clear:both;
+	position:relative;
+	top:0;
+	left:0;
+	border:1px solid #efefef;
+	}
+	
 	.slideshow{
 	clear:both;
 	margin:0;
@@ -9,6 +32,9 @@
 	width:auto;
 	height:auto;
 	overflow:hidden;
+	display: inline-block;
+	min-width: 1300px;
+	min-height: 600px;
 	}
 	
 		.slideshow li{
@@ -17,7 +43,40 @@
 		padding:0;
 		float:left;
 		display:block;
+
 		}
+		
+			.slideshow img {
+vertical-align: bottom;
+min-width: 1200px;
+min-height: 400px;
+max-width: 1300px;
+max-height: 600px;
+}
+			
+	.slideshow-buttons{
+	text-align:right;
+	margin:3px 0 0 0;
+	padding:0;
+	}
+	
+		.slideshow-buttons li{display:inline;position:relative;top:0;left:0;line-height:100%;margin:0;padding:0;}
+		.slideshow-buttons li.current a{background:#ddd;}
+		
+		.slideshow-buttons a{
+		display:inline;
+		position:relative;
+		top:0;
+		left:0;
+		padding:1px 3px;
+		margin:0 1px;
+		line-height:100%;
+		border:1px solid #efefef;
+		text-decoration:none;
+		font-size:0.8em;
+		}
+	
+
 
 /**
  * BxSlider v4.0 - Fully loaded, responsive content slider
