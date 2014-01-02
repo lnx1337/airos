@@ -343,17 +343,15 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3
    font-size: 100%;  
 }
 
-#slider{width: 100%;
+	#slider {
+width: 100%;
 margin: 0 auto;
-height: 520px;
-max-height: auto;
 padding: 0;
 overflow: hidden;
-float:left;
-display:block;}
-
-#slider img{width: 100%;}
-
+float: left;
+display: block;
+height: auto;
+}
 .fixed{position:fixed;}
 
 .datos{
