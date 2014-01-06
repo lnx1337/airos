@@ -599,11 +599,11 @@ span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bot
 
 .nostros h2{float: left; width: 100%; display: inline-block;}
 
-.mision{text-align: justify; margin: 2em 0.3em; float:left;}
+.mision{text-align: justify; margin: 2em 0.3em; float:left; padding: 0px 15px;}
 
 .mision h2{float: left; width: 100%; display: inline-block;}
 
-.vision{text-align: justify; margin: 2em 0.3em; float: left;}
+.vision{text-align: justify; margin: 2em 0.3em; float: left; padding: 0px 15px;}
 
 .vision h2{float: left; width: 100%; display: inline-block;}
 
