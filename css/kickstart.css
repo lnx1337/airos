@@ -430,6 +430,9 @@ vertical-align: bottom;
 		margin:0;
 		padding:0;
 		}
+
+
+		.clear{clear: both; float: left; display: inline-block; height: 2px; padding: 2px 0px;}
 		
 
 

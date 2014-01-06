@@ -207,7 +207,7 @@ li.group h3{color: #fff;}
 
 		div.controls>form{width:100%; height: auto; display: inline-block;}
 
-		div.controls textarea{width: 100%; height: auto; display: inline-block;float: left;}
+		div.controls textarea{width: 800px; height: 300px; max-width: 900px; max-height: 500px; display: inline-block;float: left;}
 
 		.break{width:100%; clear: both; float: left;}
 		
@@ -608,6 +608,11 @@ span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bot
 .vision h2{float: left; width: 100%; display: inline-block;}
 
 .gallery{float: left; width: 100%;}
+
+.controls {
+float: left;
+display: inline-block;
+}
 
 /*****************NAVEGACION DE CATEGORIAS************/
 
