@@ -68,7 +68,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['Contacto'];
 			
 			if($model->save()){
-                
+                if(isset($_POST['Productos']))
                 foreach ($_POST['Productos'] as $key => $value) {
                     $modelProductosHasTblContacto=new ProductosHasTblContacto;
                     $modelProductosHasTblContacto->contacto_id=$model->id;
