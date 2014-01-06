@@ -61,10 +61,10 @@ if($model->imagen!=null){
 
 $count=1;
   foreach ($modelRelacionados as $key => $value) { ?>
-<li><span class="span-rel">NombreProducto</span><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/productos/view/<?php echo $value->id;?>"><img src="http://placehold.it/150x150/" alt="relacionado"></a></li>
+<li><span class="span-rel"><?php echo $value->descripcion_producto; ?></span><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/productos/view/<?php echo $value->id;?>"><img src="<?php echo $imagen; ?>" width="150" height="150" alt="relacionado"></a></li>
 
 
-<?php   if($count>12){ break; }
+<?php   if($count>6){ break; }
           $count++;
 
  } ?>

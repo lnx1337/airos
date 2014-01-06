@@ -128,6 +128,7 @@ class LineasController extends Controller
               
 
 			}else{
+			     $model->attributes=$_POST['Lineas'];
 
                 if($model->save()){
 			       $this->redirect(array('view','id'=>$model->id));

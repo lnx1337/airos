@@ -1,5 +1,6 @@
 <?php $this->renderPartial('/admin/menu'); ?>
-
+<br>
+<br>
 
 <div class="content">
 
@@ -10,6 +11,8 @@
 <div class="span12">
 
 <div class="title">
+<a href="http://acerossoria.com/airos/index.php/ImagenesNosotros/admin">Administrar Imagenes Nosotros</a>
+
   <h3>Editar Nosotros</h3></div>
 
 <div class="span12">
