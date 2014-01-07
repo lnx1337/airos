@@ -68,7 +68,7 @@ src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&a
 </span>
 
 <span class="mapa col_12" id="Aeropuerto">
-	<h3>Sucursal Sucursal 2</h3>
+	<h3>Sucursal 2</h3>
 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
 src="https://maps.google.com.mx/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=General+Francisco+Moraz%C3%A1n+(Av.+8),+Ciudad+de+M%C3%A9xico,+D.F.&amp;aq=0&amp;oq=Av.+8+&amp;sll=19.323374,-99.051951&amp;sspn=0.002931,0.004823&amp;gl=mx&amp;ie=UTF8&amp;hq=&amp;hnear=General+Francisco+Moraz%C3%A1n+(Av.+8),+Ciudad+de+M%C3%A9xico,+D.F.&amp;ll=19.412137,-99.089738&amp;spn=0.001465,0.002411&amp;t=m&amp;z=14&amp;output=embed"></iframe>
 

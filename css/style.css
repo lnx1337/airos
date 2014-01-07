@@ -211,7 +211,28 @@ li.group h3{color: #fff;}
 
 		div.controls>form{width:100%; height: auto; display: inline-block;}
 
-		div.controls textarea{width: 100%; height: auto; display: inline-block;float: left;}
+		div.controls textarea {
+			width: 800px;
+			height: 300px;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			max-width: 860px;
+			max-height: 400px;
+			}
+
+
+			.controls label {
+				float: left;
+				margin: 5px 10px;
+				}
+
+				.controls {
+				float: left;
+				display: inline-block;
+				width: 100%;
+				}
+
 
 		.break{width:100%; clear: both; float: left;}
 		
@@ -347,17 +368,15 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3
    font-size: 100%;  
 }
 
-#slider{width: 100%;
+	#slider {
+width: 100%;
 margin: 0 auto;
-height: 520px;
-max-height: auto;
 padding: 0;
 overflow: hidden;
-float:left;
-display:block;}
-
-#slider img{width: 100%;}
-
+float: left;
+display: block;
+height: auto;
+}
 .fixed{position:fixed;}
 
 .datos{
@@ -605,15 +624,20 @@ span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bot
 
 .nostros h2{float: left; width: 100%; display: inline-block;}
 
-.mision{text-align: justify; margin: 2em 0.3em; float:left;}
+.mision{text-align: justify; margin: 2em 0.3em; float:left; padding: 0px 15px;}
 
 .mision h2{float: left; width: 100%; display: inline-block;}
 
-.vision{text-align: justify; margin: 2em 0.3em; float: left;}
+.vision{text-align: justify; margin: 2em 0.3em; float: left; padding: 0px 15px;}
 
 .vision h2{float: left; width: 100%; display: inline-block;}
 
 .gallery{float: left; width: 100%;}
+
+.controls {
+float: left;
+display: inline-block;
+}
 
 /*****************NAVEGACION DE CATEGORIAS************/
 
