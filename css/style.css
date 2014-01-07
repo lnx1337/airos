@@ -73,6 +73,10 @@ blockquote{
 font-family: "Arimo", arial, verdana, sans-serif;
 font-style: italic;
 }
+.controls {
+float: left;
+display: inline-block;
+}
 
 /*---------------------------------
 	LAYOUT
