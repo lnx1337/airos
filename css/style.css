@@ -223,6 +223,12 @@ li.group h3{color: #fff;}
 				margin: 5px 10px;
 				}
 
+				.controls {
+				float: left;
+				display: inline-block;
+				width: 100%;
+				}
+
 
 		.break{width:100%; clear: both; float: left;}
 		
