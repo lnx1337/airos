@@ -207,7 +207,22 @@ li.group h3{color: #fff;}
 
 		div.controls>form{width:100%; height: auto; display: inline-block;}
 
-		div.controls textarea{width: 800px; height: 300px; max-width: 900px; max-height: 500px; display: inline-block;float: left;}
+		div.controls textarea {
+			width: 800px;
+			height: 300px;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			max-width: 860px;
+			max-height: 400px;
+			}
+
+
+			.controls label {
+				float: left;
+				margin: 5px 10px;
+				}
+
 
 		.break{width:100%; clear: both; float: left;}
 		
