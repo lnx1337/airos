@@ -99,14 +99,13 @@ padding:0 2%;
 border:1px solid #ccc;
 }
 
-header{
-float: left;
-background-color: #646569;
+header {
 display: inline-block;
 color: #fff;
-height: 220px;
-max-height: 220px;
-width: 100%;}
+height: 170px;
+max-height: 200px;
+width: 100%;
+}
 
 footer{
 text-align:center;
@@ -385,17 +384,17 @@ font-weight: lighter;
 background-color: #646569;
 color: #fff;
 font-size: 2em;
-padding: 0.2em 0.5em;
+padding: 0px 0.5em;
 width: 100%;
-display: inline-block;
+display: block;
 text-align: center;}
 
-.telefono{float: left; display: inline-block; margin: 8px 0px;}
+.telefono{float: left; display: inline-block; margin: 0px 0px;}
 
 .buscador{float: left;
 display: block;
 width: 50%;
-margin: 10px!important;}
+margin: 1px!important;}
 
 .buscador i{float: right; margin: 0px 5px 0px 0px; line-height: 1.5;}
 .garantia{background: none; 
@@ -408,7 +407,7 @@ font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdan
 background-color: #fff;
 color: #333;
 font-size: 1.5em;
-padding: 0.5em;
+padding: 0.2em;
 width: 100%;
 text-align: center;
 display: inline-block;
@@ -424,8 +423,8 @@ border-bottom: 2px #C61C35 solid;
 color: #333;
 font-weight: normal;
 list-style-type: none;
-line-height: 3;
-margin: 0px 30px 10px 30px;
+line-height: 2;
+margin: 0px 25px 5px 25px;
 padding: 0px;
 }
 
