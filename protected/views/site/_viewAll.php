@@ -1,4 +1,4 @@
-<li class="item col_4">
+<li class="item col_3">
 <span class="foto-producto">
 
 
@@ -19,7 +19,7 @@ if($data->imagen!=null){
                    <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/default.png'; ?>
      <?php } ?>
 <?php } ?>
-<img class="productosimg" src="<?php echo  $imagen; ?>" alt="producto" width="300" height="180" />
+<img class="productosimg" src="<?php echo  $imagen; ?>" alt="producto" />
 </span>
 <small class="footer-producto gris">
 <h6><?php echo  $data->descripcion_producto; ?></h6>
