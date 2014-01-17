@@ -16,6 +16,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.Mail.*',
+		'application.Net.*'
 	),
 
 	'modules'=>array(
@@ -68,18 +70,18 @@ return array(
 	'db'=>array(
 
 		     //servidorparallels descomenta la linea de abajo para el de parallels
-			//'connectionString' => 'mysql:host=localhost;dbname=aceros_soria',
-		    'connectionString' => 'mysql:host=localhost;dbname=soriadb',
+			'connectionString' => 'mysql:host=localhost;dbname=aceros_soria',
+		    //'connectionString' => 'mysql:host=localhost;dbname=soriadb',
 			'emulatePrepare' => true,
 			//servidorparallels descomenta la linea de abajo para el de parallels
-			//'username' => 'acero_soria',
-			//'password' => 'lamisma00',
+			'username' => 'acero_soria',
+			'password' => 'lamisma00',
 			//servidor rainfinitum
 			//'username'=>'root',
 			//'password'=>'admin',
 			//accesos locales
-			 'username'=>'root',
-			 'password'=>'',
+			 //'username'=>'root',
+			 //'password'=>'',
 			'charset' => 'utf8',
 		),
 

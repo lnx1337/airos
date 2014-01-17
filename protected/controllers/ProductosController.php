@@ -290,7 +290,7 @@ $model->attributes=$_POST['Cuentas'];
                  $_SESSION['dataProvider']=$s;
          }
 		     
-		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>' descripcion_producto LIKE "%'.$_SESSION['dataProvider'].'%" OR clave LIKE "%'.$_SESSION['dataProvider'].'%"','order'=>'id DESC')));
+		 $dataProvider=new CActiveDataProvider('Productos',array('criteria'=>array('condition'=>"descripcion_producto LIKE '%".$_SESSION['dataProvider']."%' OR clave LIKE '%".$_SESSION['dataProvider']."%'",'order'=>'id DESC')));
          
          
          $this->renderPartial('_SearchResponse',array('dataProvider'=>$dataProvider,),false,true);
