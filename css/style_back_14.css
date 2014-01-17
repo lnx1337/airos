@@ -7,6 +7,8 @@
 /*---------------------------------
 	IMPORTS
 -----------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
 @font-face {
     font-family: 'coolveticaregular', 'Helvetica Neue', Helvetica sans-serif;
     src: url('fonts/coolvetica/coolvetica_rg-webfont.eot');
@@ -26,13 +28,13 @@
 html{margin: 0px; padding: 0px; float: none;}
 
 h1,h2,h3,h4,h5,h6{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:lighter;
 }
 
 thead th,
 tbody th{
-font-family: "coolveticaregular", "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 button,
@@ -40,7 +42,7 @@ a.btn,
 input[type="submit"],
 input[type="reset"],
 input[type="button"]{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 }
 
 
@@ -63,13 +65,17 @@ a:hover.gris{color: #fff;}
 a:hover.blanco{color: #333;}
 
 .menu{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: lighter;
 }
 
 blockquote{
 font-family: "Arimo", arial, verdana, sans-serif;
 font-style: italic;
+}
+.controls {
+float: left;
+display: inline-block;
 }
 
 /*---------------------------------
@@ -79,8 +85,8 @@ body{
 margin:0;
 padding:0 0 0 0;
 color:#000;
-background:#efefef url(/soria/css/img/gray_jean.png);
-font:lighter 0.9em/150% 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+background:#efefef url(img/gray_jean.png);
+font:lighter 0.9em/150% 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 letter-spacing: 0.02em;
 text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
 }
@@ -94,14 +100,13 @@ border:1px solid #ccc;
 }
 
 header{
-border-bottom: 0.2em solid #C61C35;
 float: left;
-width: 100%;
-height: auto;
 background-color: #646569;
-display: block;
+display: inline-block;
 color: #fff;
-position: relative;}
+height: 220px;
+max-height: 220px;
+width: 100%;}
 
 footer{
 text-align:center;
@@ -115,13 +120,20 @@ text-shadow:0px 1px 1px #fff;
 float: left;
 background:#fff;}
 
+.cwell {
+display: inline-block;
+float: left;
+position: relative;
+width: 100%;
+margin: 25px auto;
+}
 
 	#link-top{
 	display:none;
 	}
 	
 	
-	
+#ui-id-1{z-index:9999;overflow: auto; max-height: 780px; height: 700px;}	
 	
 /* NAV BAR*/
 .navbar{
@@ -134,6 +146,97 @@ color:#fff;
 z-index:1000;
 
 }
+
+
+.home-back {
+font-size: 1em;
+float: left;
+display: inline-block;
+margin: 5% auto;
+}
+
+.home-back h2{font-size: 2em;}
+
+.navbar-back{
+position:fixed;
+top:0;
+left:0;
+width: 100%;
+background:#646569;
+color:#333;
+z-index:1000;
+float: left;
+height: 260px;
+border-bottom: 2px solid #C61C35;
+
+}
+
+.navbar-inner-back{
+}
+
+.navbar-back span{
+	color:#646569;
+	}
+	
+	
+	.navbar-back ul{
+	display:block;
+	margin:30px auto;
+	padding:10px;
+	text-align: center;
+	}
+	
+		.navbar-back li, .navbar-back ul li li{
+		margin:0;
+		padding:5px 0 0 0;
+		list-style-type:0;
+		display:inline-block;
+		}
+		
+.navbar-back li.home{}
+.navbar-back li.salir{}
+
+li.group h3{color: #fff;}
+
+		.navbar-back li a{
+		display:inline-block;
+		background-color: #fff;
+		color:#333;
+		padding:1em 1.3em;
+		text-decoration:none;
+		text-transform: uppercase;
+		line-height:100%;
+		font-size: 12px;
+		}
+
+		div.controls>form{width:100%; height: auto; display: inline-block;}
+
+		div.controls textarea {
+			width: 800px;
+			height: 300px;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			max-width: 860px;
+			max-height: 400px;
+			}
+
+
+			.controls label {
+				float: left;
+				margin: 5px 10px;
+				}
+
+				.controls {
+				float: left;
+				display: inline-block;
+				width: 100%;
+				}
+
+
+		.break{width:100%; clear: both; float: left;}
+		
+.group{display: inline-block; margin: 0px auto; padding: 0px 2em; border: #fff dashed 1px;}
 
 	.navbar #logo{
 	position:absolute;
@@ -172,6 +275,16 @@ z-index:1000;
 		line-height:100%;
 		font-size: 1.2em;
 		}
+
+		i.social-img{float: left;
+width: 30px;
+height: auto;
+padding: 0px 1px;
+margin: 0px;
+display: inline-block}
+		i.social-img img{float: left; width: 100%; height: auto;}
+		.social{display: inline-block;}
+		.social-buttons{padding: 0px; margin: 0px; display: block;}
 		
 .callout{
 background:#4598ef;/*#86dc00;*/
@@ -205,7 +318,8 @@ display:block;
 
 /******************************************----------E S T I L O S    P R O P I O S------******************************************************/
 
-.sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; box-shadow: 0 0 5px #999; z-index: 20; }
+.sticky_navigation { width:100%;  background:#646569; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999; 
+box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3px solid #C61C35;}
 
 
 
@@ -214,6 +328,8 @@ display:block;
 .clear-top{}
 
 .rojo{background-color: #C61C35;}
+
+.red{color:#C61C35!important;}
 
 .txt-rojo{color: #C61C35;}
 
@@ -252,17 +368,19 @@ display:block;
    font-size: 100%;  
 }
 
-#slider{width: 100%;
+	#slider {
+width: 100%;
 margin: 0 auto;
-height: auto;
 padding: 0;
 overflow: hidden;
-top: 0;}
-
-.fixed{}
+float: left;
+display: block;
+height: auto;
+}
+.fixed{position:fixed;}
 
 .datos{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
 font-weight: lighter;
 background-color: #646569;
 color: #fff;
@@ -270,36 +388,58 @@ font-size: 2em;
 padding: 0.2em 0.5em;
 width: 100%;
 display: inline-block;
-text-align: center;
-}
+text-align: center;}
 
-.telefono{float: left; display: inline-block; width:40%;line-height: 1.5; margin: 0px;}
+.telefono{float: left; display: inline-block; margin: 8px 0px;}
 
-.buscador{float: right; display: inline-block; width:50%; margin: 0px!important;}
+.buscador{float: left;
+display: block;
+width: 50%;
+margin: 10px!important;}
 
-.buscador i{float: left; margin: 0px 5px 0px 0px; line-height: 1.5;}
-.garantia{}
+.buscador i{float: right; margin: 0px 5px 0px 0px; line-height: 1.5;}
+.garantia{background: none; 
+	background-color: transparent!important;margin: 0px!important; padding: 0px!important; font-size: 0.9em;}
 
 nav.categorias{}
 
 .menu-soria{
-font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
-background-color: #d1d4da;
-color: #fff;
+font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+background-color: #fff;
+color: #333;
 font-size: 1.5em;
 padding: 0.5em;
 width: 100%;
 text-align: center;
 display: inline-block;
-margin: 0px auto;}
+margin: 0px auto;
+border-top: 1px solid #C61C35;
+border-bottom: 1.2px solid #C61C35;}
 
-.menu-soria ul{  text-align: center;}
+.menu-soria ul{  text-align: center; margin:0px;}
 
-.menu-soria ul li{border-color: #7f7f7f; border-style: solid; border-width: thin; background-color: #a1a1a1; text-align: center; display: inline-block; margin: 5px auto; list-style-type: none; line-height:3; margin: 10px 15px; padding: 0px 10px 0px 10px;-webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;}
+.menu-soria ul li{
+display: inline-block;
+border-bottom: 2px #C61C35 solid;
+color: #333;
+font-weight: normal;
+list-style-type: none;
+line-height: 3;
+margin: 0px 30px 10px 30px;
+padding: 0px;
+}
 
-.menu-soria ul li.logo{ width: 400px; margin: 0px 10px 0px 10px; border:none 0px; background: transparent; padding: 0px;}
+.menu-soria ul li:hover{
+border-bottom: 2px #333 solid;
+}
+
+.menu-soria ul li.logo{ width: 400px;
+margin: 0px 100px 0px 10px;
+border: none 0px;
+background: transparent;
+padding: 0px;
+float: left;
+}
 
 .menu-soria ul li.logo img{width: 100%; }
 
@@ -318,7 +458,14 @@ line-height: 0;}
 
 .menu-soria ul li a{}
 
-.content-productos{float: left; width: 100%; height: auto;}
+.email_header {
+font-size: 0.65em;
+float: left;
+clear: left;
+display: block;
+margin-left: 18%;}
+
+.content-productos{float: left; width: 100%; height: auto; margin-top: 3%;}
 
 .productos-random{}
 
@@ -348,7 +495,7 @@ height: 180px;
 margin: auto;
 display: inline-block;}
 
-.footer-producto{font-family: 'coolveticaregular', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
+.footer-producto{font-family: 'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif; height: 160px;}
 
 small.footer-producto{display: inline-block;
 width: 100%;
@@ -369,7 +516,9 @@ small.footer-producto button{float: right;
 width: 100%;
 background-color: #fffff3;
 display: inline-block;
-margin: 0px 0px 5px 0px;}
+margin: 0px 0px 5px 0px;
+padding: 0.7em 0px;
+font-size: 1em;}
 
 .todos{float: right; width: 100%; height: auto; padding: 5px;
 text-align: right; font-size: 1.1em;}
@@ -386,12 +535,13 @@ span.copyright{float: left; margin-left: 11%}
 
 .top-title{float: left; padding: 0px; width: 100%; margin: 10px auto;}
 
-.top-title h2{margin: 0px; padding: 0px;}
+.top-title h2{margin: 0px; padding: 0px 0px 0px 25px; border-bottom: solid 2px #C61C35;}
 
 .navigation{margin-right: 10px;}
 
 .tabla-detalles{}
 
+.content{display: block; clear: both; float: left; width: 100%;}
 .content-producto{}
 
 .slider-producto{}
@@ -412,10 +562,31 @@ span.copyright{float: left; margin-left: 11%}
 
 .relacionados ul{display:inline-block; margin: 0px; padding: 0px; text-align: center;}
 
-.relacionados ul li{display: inline-block;
+.relacionados ul li{
+display: inline-block;
 list-style-type: none;
-float: left;
-margin: 0.1em;}
+margin: 0.1em;
+width: 150px;
+height: 150px;
+position: relative;}
+
+.relacionados ul li span {
+display: block;
+height: auto;
+}
+
+span.span-rel{
+width: 150px;
+z-index: 100;
+position: relative;
+background-color: rgba(198, 28, 53, 0.90);
+color: #fff;
+line-height: 2;
+font-weight: 500;
+font-size: 10px;
+word-wrap: break-word;
+padding: 6.5px;
+top: 100%;}
 
 .relacionados ul li img{border: 0.3em #fff solid; width: 100%; height: auto;}
 
@@ -425,17 +596,28 @@ margin: 0.1em;}
 
 .campo label.sel{width: 100%;}
 
-.campo input{width: 70%;}
+.campo input{width: 70%; margin: 0.5em 0px;}
 
 .campo select{width:100%;}
 
 .campo textarea{width: 100%; max-height: 100px;}
 
-.submit{float: right; margin: 5px 0px 0px 0px}
+.submit{float: right; margin: 10px 0px 0px 0px}
 
-ul.datos-contacto{}
+input[type="search"]{font-family:'Lato', "Helvetica Neue Light", "Helvetica Neue", Helvetica, verdana, sans-serif;
+font-weight: lighter;}
 
-ul.datos-contacto li{width: 100%; list-style-type: none;}
+ul.datos-contacto{
+font-size: 1.2em;
+background-color: #fff;
+padding: 1em;
+margin: 0px;
+border: inset 1px #C61C35;
+}
+
+ul.datos-contacto li{width: 100%; list-style-type: none; }
+
+
 
 .mapas{width: 100%; display: inline-block;}
 
@@ -443,15 +625,32 @@ ul.datos-contacto li{width: 100%; list-style-type: none;}
 
 .mapas span.mapa{display: inline-table; background-color: #f3f3f3; height: 270px; text-align: justify;}
 
+span.mapa iframe{float:left; width: 100%; height:280px; padding: 1em; border-bottom: solid #333 1px;}
+
 .footer-mapa{padding: 0px 2em; float: left;}
+
+.footer-mapa address{font-size: 1.1em; padding: 0.2em; margin: 5px auto;}
 
 .historia{text-align: justify; margin: 2em auto;}
 
-.nosotros{text-align: justify; margin: 2em auto;}
+.nosotros{text-align: justify; margin: 2em auto; float: left;}
 
-.mision{text-align: justify; margin: 2em 0.3em;}
+.nostros h2{float: left; width: 100%; display: inline-block;}
 
-.vision{text-align: justify; margin: 2em 0.3em;}
+.mision{text-align: justify; margin: 2em 0.3em; float:left; padding: 0px 15px;}
+
+.mision h2{float: left; width: 100%; display: inline-block;}
+
+.vision{text-align: justify; margin: 2em 0.3em; float: left; padding: 0px 15px;}
+
+.vision h2{float: left; width: 100%; display: inline-block;}
+
+.gallery{float: left; width: 100%;}
+
+.controls {
+float: left;
+display: inline-block;
+}
 
 /*****************NAVEGACION DE CATEGORIAS************/
 
@@ -469,14 +668,13 @@ background-color: #646569;
     color: #fff;
 }
 
-ul.nav-li{display: inline-table; margin: 0px auto;}
+ul.nav-li{display: inline-table; margin: 0px auto!important;}
+
 .nav-li {
     list-style: none;
      *zoom: 1;
      background:#646569;
      display: inline-block;
-     float: left;
- 
      text-align: center;
 }
 .nav-li:before,
@@ -503,20 +701,30 @@ ul.nav-li{display: inline-table; margin: 0px auto;}
 }
 .nav-li > li {
     float: left;
-    text-align: center;
-padding: 0px 1em;
+text-align: center;
+padding: 0px 0.5em 0px 0.2em;
+border-right: 1px solid #3c3c3c;
 }
 .nav-li > li > .parent {
-    background-image: url("/soria/images/downArrow.png");
+    background-image: url("../images/downArrow.png");
     background-repeat: no-repeat;
     background-position: right;
+}
+
+.test.last {
+border: 0;
 }
 .nav-li > li > a {
     display: block;
 }
 .nav-li li  ul {
     position: absolute;
-    left: -9999px;
+left: -9999px;
+width: 350px;
+max-height: 500px;
+height: 500px;
+overflow-y: auto;
+overflow-x: hidden
 }
 .nav-li > li.hover > ul {
     left: 0;
@@ -526,12 +734,29 @@ padding: 0px 1em;
     top: 0;
 }
 .nav-li li li a {
-    display: block;
-    background: #646569;
-    position: relative;
-    z-index:100;
-    border-top: 1px solid #646569;
+ display: block;
+background: #646569;
+position: relative;
+z-index: 100;
+border-top: 1px solid #3c3c3c;
+border-left: 1px solid #3c3c3c;
+border-right: 1px solid #3c3c3c;
+padding: 0.2em;
+font-size: 0.8em;
+width: 200px;
+text-align: left;
 }
+
+.nav-li li li a:hover {
+background: #3c3c3c;
+cursor: pointer;
+
+}
+
+.nav-li li li a:last-child {
+border-bottom: 1.5px solid #3c3c3c;
+}
+
 .nav-li li li li a {
     background:#249578;
     z-index:200;
@@ -549,7 +774,7 @@ padding: 0px 1em;
         background-position: 95% 50%;
     }
     .nav-li li li .parent {
-        background-image: url("/soria/images/downArrow.png");
+        background-image: url("../images/downArrow.png");
         background-repeat: no-repeat;
         background-position: 95% 50%;
     }
@@ -560,7 +785,15 @@ padding: 0px 1em;
    .nav-li > li.hover > ul , .nav-li li li.hover ul {
         position: static;
     }
-    .menu-soria{display: none;}
+    .menu-soria, #slider{display: none;}
+
+.telefono{float: left; clear: both; font-size: 1em; width: 100%}
+
+.buscador{float: left; width: 90%; height: 20px; font-size: 1em;}
+
+.buscador i{float: right; margin: 0px 5px 0px 0px; line-height: 1.5;}
+.garantia{display: none;}
+
 
 }
 
