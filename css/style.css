@@ -367,15 +367,18 @@ box-shadow: 0 0 5px #999; z-index: 1000; position:fixed; top:0; border-bottom: 3
    font-size: 100%;  
 }
 
-	#slider {
+#slider {
 width: 100%;
-margin: 0 auto;
+margin: 20px auto;
 padding: 0;
 overflow: hidden;
 float: left;
-display: block;
-height: auto;
+display: inline-block;
+height: 500px;
+max-height: 500px;
 }
+
+
 .fixed{position:fixed;}
 
 .datos{

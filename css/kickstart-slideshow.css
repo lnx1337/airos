@@ -29,7 +29,7 @@ clear:both;
 	clear: both;
 	margin: 0;
 	padding: 0;
-	height: auto;
+	height: 500px;
 	overflow: hidden;
 	display: inline-block;
 	}
@@ -46,7 +46,7 @@ clear:both;
 vertical-align: bottom;
 width: 100%;
 min-height: 400px;
-max-height: 600px;
+max-height: 500px;
 }
 			
 	.slideshow-buttons{
@@ -99,6 +99,14 @@ max-height: 600px;
 .bx-wrapper img {
 	width: 100%;
 	display: block;
+}
+
+.bx-viewport{
+width: 100%;
+overflow: hidden;
+position: relative;
+height: 500px!important;
+display: block!important;
 }
 
 /** THEME
