@@ -227,17 +227,35 @@ $model->attributes=$_POST['Cuentas'];
        }
 
          $ids = substr($ids, 0, -1);
+       
+      if($ids != ""){
+			
+			$dataProvider=new CActiveDataProvider('Productos',array(
+							'pagination' => array('pageSize' => 8),
+							'criteria'=>array('condition'=>'sublinea_id in ('.$ids.')')));
 
-  	  
-		$dataProvider=new CActiveDataProvider('Productos',array(
-						'pagination' => array('pageSize' => 8),
-						'criteria'=>array('condition'=>'sublinea_id in ('.$ids.')')));
+			$this->render('index',array(
+				'dataProvider'=>$dataProvider,
 
+			));
 
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		
+	}else{
+            
+            $dataProvider=new CActiveDataProvider('Productos',array(
+							'pagination' => array('pageSize' => 8),
+							'criteria'=>array('condition'=>'sublinea_id in (0)')));
 
-		));
+			$this->render('index',array(
+				'dataProvider'=>$dataProvider,
+
+			));
+            $this->render('index',array(
+				'dataProvider'=>$dataProvider,
+
+			));
+
+	}
 		
 		
 	

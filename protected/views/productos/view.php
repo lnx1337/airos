@@ -3,15 +3,18 @@
 <ul class="slideshow">
 
 <?php 
-$imagen;
+$imagen="";
+
 if($model->imagen!=null){
-  $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
-}else{
-  $imagen=Yii::app()->request->baseUrl."/lineasImages/".$model->sublinea->linea->clave.'.jpg';
-}
+     $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
+}else {?>
 
-
-?>
+     <?php  if(file_exists(getcwd().'/lineasImages/'.$model->sublinea->linea->clave.'.jpg')){ ?> 
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/'.$model->sublinea->linea->clave.'.jpg'; ?>
+     <?php }else { ?>
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/default.png'; ?>
+     <?php } ?>
+<?php } ?>
 
 <li><img src="<?php echo $imagen; ?>" width="600" height="400" /></li>
 </ul>
@@ -61,6 +64,22 @@ if($model->imagen!=null){
 
 $count=1;
   foreach ($modelRelacionados as $key => $value) { ?>
+
+<?php 
+$imagen="";
+
+if($model->imagen!=null){
+     $imagen=Yii::app()->request->baseUrl."/PrinprodImages/".$model->imagen;
+}else {?>
+
+     <?php  if(file_exists(getcwd().'/lineasImages/'.$model->sublinea->linea->clave.'.jpg')){ ?> 
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/'.$model->sublinea->linea->clave.'.jpg'; ?>
+     <?php }else { ?>
+                   <?php $imagen=Yii::app()->request->baseUrl.'/lineasImages/default.png'; ?>
+     <?php } ?>
+<?php } ?>
+
+
 <li><span class="span-rel"><?php echo $value->descripcion_producto; ?></span><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/productos/view/<?php echo $value->id;?>"><img src="<?php echo $imagen; ?>" width="150" height="150" alt="relacionado"></a></li>
 
 
