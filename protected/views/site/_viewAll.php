@@ -1,11 +1,5 @@
 <li class="item col_3">
 <span class="foto-producto">
-
-
-
-
-
-
 <?php 
 $imagen="";
 
