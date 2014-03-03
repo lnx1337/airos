@@ -214,50 +214,40 @@ $model->attributes=$_POST['Cuentas'];
 
 
 
-
+/*
+* Get menu by linea id and get the id from each subline
+*/
 
   public function actionLinea($id){
 
-
-       $lista=Yii::app()->db->createCommand('select * from tbl_sublineas  where linea_id='.$id)->queryAll();
-       $ids=null; 
+    $lista=Yii::app()->db->createCommand('select * from tbl_sublineas  where linea_id='.$id)->queryAll();
+    $ids=null; 
+    $condition="";
        
-       foreach ($lista as $key => $value) {
-            $ids.=$value['id'].",";	   
-       }
+    foreach ($lista as $key => $value) {
+        $ids.=$value['id'].",";	   
+    }
 
-         $ids = substr($ids, 0, -1);
-       
-      if($ids != ""){
-			
-			$dataProvider=new CActiveDataProvider('Productos',array(
-							'pagination' => array('pageSize' => 8),
-							'criteria'=>array('condition'=>'sublinea_id in ('.$ids.')')));
+    $ids = substr($ids, 0, -1);
 
-			$this->render('index',array(
-				'dataProvider'=>$dataProvider,
-
-			));
-
-		
-	}else{
-            
-            $dataProvider=new CActiveDataProvider('Productos',array(
-							'pagination' => array('pageSize' => 8),
-							'criteria'=>array('condition'=>'sublinea_id in (0)')));
-
-			$this->render('index',array(
-				'dataProvider'=>$dataProvider,
-
-			));
-            $this->render('index',array(
-				'dataProvider'=>$dataProvider,
-
-			));
+    if($id==72)	{	
+  		$ids=169;
+  		$condition=" and id>1782 ";
 
 	}
-		
-		
+       
+    if($ids == ""){
+		$ids=0;
+	}
+
+	$dataProvider=new CActiveDataProvider('Productos',array(
+							'pagination' => array('pageSize' => 8),
+							'criteria'=>array('condition'=>'sublinea_id in ('.$ids.') '.$condition)));
+
+	$this->render('index',array(
+				'dataProvider'=>$dataProvider,
+
+	));	
 	
   }
 

@@ -42,7 +42,7 @@ class Contacto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, comentarios, otros', 'required'),
+			array('nombre, comentarios, otros, email', 'required'),
 			array('nombre, email, telefono', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -109,7 +109,6 @@ class Contacto extends CActiveRecord
         	$count++;
 
         }
-
 
         return $Productos;
  

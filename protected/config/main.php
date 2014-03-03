@@ -16,8 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'application.Mail.*',
-		'application.Net.*'
+		'application.SMTPClient.*',
 	),
 
 	'modules'=>array(

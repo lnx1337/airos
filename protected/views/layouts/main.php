@@ -95,7 +95,7 @@ foreach ($modelLineas as $key => $valueLineas) {
 
 <?php
 
-$lineas=array('PA'=>'Alambres','PF'=>'Fierro','PEH'=>'Estructurales','PTU'=>'Tuberias','PTA'=>'Tableros','PTI'=>'Tiras','PL'=>'Laminas','PMA'=>'Mallas','PME'=>'Metales','PR'=>'Rejillas','PPE'=>'Perfiles','PPL'=>'Placas','PPTR'=>'PTR','PC'=>'Construcción');
+$lineas=array('PA'=>'Alambres','PF'=>'Fierro','PE'=>'Estructurales','PTU'=>'Tuberias','PTA'=>'Tableros','PTI'=>'Tiras','PL'=>'Laminas','PMA'=>'Mallas','PME'=>'Metales','PR'=>'Rejillas','PPE'=>'Perfiles','PPL'=>'Placas','PPTR'=>'PTR','PC'=>'Construcción');
 $lista=null;
 $i=1;
 foreach ($lineas as $key => $value) {

@@ -59,25 +59,41 @@ class SiteController extends Controller
 	public function actionContacto(){
       $model=new Contacto;
       $modelProductos=Productos::model()->findAll(array('order'=>'descripcion_producto'));
+      $cadenaEmail="";
 
 
        
 
 		if(isset($_POST['Contacto']))
 		{
+
+
 			$model->attributes=$_POST['Contacto'];
-			
+
 			if($model->save()){
-                if(isset($_POST['Productos']))
-                foreach ($_POST['Productos'] as $key => $value) {
-                    $modelProductosHasTblContacto=new ProductosHasTblContacto;
-                    $modelProductosHasTblContacto->contacto_id=$model->id;
-                    $modelProductosHasTblContacto->producto_id=$value;
-                    $modelProductosHasTblContacto->save();
-                }
+
+				
+				$cadenaEmail .= "Nombre Contacto: ".$model->nombre."\nEmail: ".$model->email."\nTelefono: "."\n".$model->telefono."\n"."\nComentarios: ".$model->comentarios."\n";
+             
+                if(isset($_POST['Productos'])) 
+	                foreach ($_POST['Productos'] as $key => $value) {
+	                    
+	                    $modelProductosHasTblContacto=new ProductosHasTblContacto;
+	                    $modelProductosHasTblContacto->contacto_id=$model->id;
+	                    $modelProductosHasTblContacto->producto_id=$value;
+	                    $modelProductosHasTblContacto->save();
+	                    $modelProductos = Productos::model()->find(array('condition'=>'id='.$value));
+	                    $cadenaEmail .= "\n Producto: ".$modelProductos->producto."\n";
+
+	                }
+				
+				$cadenaEmail .="\n Otros: ".$model->otros;
+				$this->Send("contacto@acerossoria.com",$cadenaEmail);
+				$this->Send("ventas@acerossoria.com",$cadenaEmail);
 				$this->redirect(array('contacto?sk=1'));
 
-			}	
+			}
+		
 
 		}
       
@@ -85,27 +101,13 @@ class SiteController extends Controller
 
 	}
 
-	public function actionSend(){
-
-	  $from_name ="Mahendra";
-	  $from_mail = "consultor@acerossoria.com";
-	  $to = "dev.lnx1337@gmail.com";
-	  $subject = "Mahendra's Test Mail";
-	  $mail_body = "This is email test";
-	  $message = $mail_body ;
-	  $headers = "MIME-Version: 1.0" . "\r\n";
-	  $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-	  $headers .= "From: ".$from_name." <".$from_mail.">\r\n";
-	  ob_start();
-	  $sendmail=mail($to,$subject,$message,$headers);
-
-	  if($sendmail)
-	  {
-	      echo "bien";
-	  }else
-	  {
-	      echo "Not Send";  
-	  }
+	public function Send($email,$data){
+		$SmtpServer="acerossoria.com";
+		$SmtpPort="25"; //default
+		$SmtpUser="consultor@acerossoria.com";
+		$SmtpPass="J41r*2013";
+		$SMTPMail = new SMTPClient ($SmtpServer, $SmtpPort, $SmtpUser, $SmtpPass, "contacto@acerossoria.com", $email,"Contacto AcerosSoria",$data);
+		$SMTPChat = $SMTPMail->SendMail();		
 	}
 
 	/**
