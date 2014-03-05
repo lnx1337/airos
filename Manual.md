@@ -7,7 +7,7 @@ Para acceder al administrador necesitamos entrar a la url
 Para poder acceder a los modulos de administración es necesario hacer login
 con los accesos de administración.
 
-## Modulos de administracón
+## Modulos de administración
 * Productos
   * Nuevo Producto
   * Consulta de productos
