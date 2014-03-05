@@ -124,7 +124,7 @@ Para eliminar una imagen del slider accedemos a la url de recurso, nos llevara a
 
 ## Administración de contactos
 #### url del recurso:
-**http://acerossoria.com/airos/index.php/Contacto/admin**
+**http://acerossoria.com/index.php/Contacto/admin**
 
 En administración de contactos tenemos una tabla con todos los visitantes que desean obtener mas información de productos tenemos el contacto de la persona en este caso **nombre**, **telefono**, **email**, **comentarios** y **productos de su interes**.
 
