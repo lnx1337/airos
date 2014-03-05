@@ -27,6 +27,7 @@ Con los accesos de administración.
 
 
 
+
 ## Administración de Productos
 
 
@@ -47,7 +48,7 @@ Para la creación de un producto damos clic en el menú **NUEVO PRODUCTO** e ins
 #### url del recurso
 **http://acerossoria.com/index.php/productos/admin**
 
-Para editar un producto lo podemos hacer desde el menú consultar productos estando en la tabla en la columna del lado derecho tenemos la acción editar que es el icono de un lápiz, al dar clic ahí nos llevará a la edición del producto, ahí podemos editar su información una vez editado guardamos cambios con el botón "sabe".
+Para editar un producto lo podemos hacer desde el menú consultar productos estando en la tabla en la columna del lado derecho tenemos la acción editar que es el icono de un lápiz, al dar clic ahí nos llevará a la edición del producto, ahí podemos editar su información una vez editado guardamos cambios con el botón "save".
 
 ### Borrar producto
 **http://acerossoria.com/index.php/productos/admin**
