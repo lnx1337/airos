@@ -6,7 +6,7 @@ $(document).ready(function(){
 $(function() {
 
 	$(".auto").autocomplete({
-		source: "/airos/index.php/productos/Autocom",
+		source: "/index.php/productos/Autocom",
 		minLength: 1
 	});				
 
@@ -25,7 +25,7 @@ $("#search").keypress(function( event ) {
             $.ajax({
                      type: "POST",
                      data:"search="+textSearch,
-                     url: "/airos/index.php/productos/search",
+                     url: "/index.php/productos/search",
                      success: function(data){
                        $('.productos-random').html(data);
                        $target = $(".list-view");
@@ -67,7 +67,7 @@ if(textSearch.length > 0 && textSearch != null){
   $.ajax({
            type: "POST",
            data:"search="+textSearch,
-           url: "/airos/index.php/productos/search",
+           url: "/index.php/productos/search",
            success: function(data){
              $('.productos-random').html(data);
 
