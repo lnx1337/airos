@@ -1,6 +1,6 @@
 /*
-	99Lime.com HTML KickStart by Joshua Gatcke
-	style.css
+	Alonso Caballero @alonso_ct
+	Jair Peña @lnx1337
 	
 */
 
@@ -480,7 +480,9 @@ ul.productos-random li{}
 background-color: #C61C35;
 max-height: 355px;
 height: 355px;
-overflow: hidden;}
+overflow: hidden;
+position: relative;
+display: inline-block;}
 
 .foto-producto{text-align: center;
 margin: 0px auto;
@@ -503,7 +505,9 @@ small.footer-producto{display: inline-block;
 width: 100%;
 padding: 0px 1em;}
 
-small.footer-producto h5{color: #fff; font-size: 0.9em;}
+small.footer-producto h5{color: #fff;
+font-size: 0.8em;
+margin: 2px 0px;}
 
 small.footer-producto h6{color:#fff; margin: 0px; font-size: 1.1em; margin-top: 3px;}
 
@@ -512,15 +516,18 @@ max-height: 100px;
 overflow: hidden;
 display: inline-block;
 width: 100%;
-text-align: justify;}
+text-align: justify;
+margin: 0;
+font-size: 10px;}
 
-small.footer-producto button{float: right;
-width: 100%;
+small.footer-producto button{width: 90%;
 background-color: #fffff3;
-display: inline-block;
-margin: 0px 0px 5px 0px;
+display: block;
+margin: 0px 5%;
 padding: 0.7em 0px;
-font-size: 1em;}
+font-size: 1em;
+position: absolute;
+top: 88%;}
 
 .todos{float: right; width: 100%; height: auto; padding: 5px;
 text-align: right; font-size: 1.1em;}
@@ -670,7 +677,8 @@ background-color: #646569;
     color: #fff;
 }
 
-ul.nav-li{display: inline-table; margin: 0px auto!important;}
+ul.nav-li{display:inline-block;
+margin: 0px auto!important;}
 
 .nav-li {
     list-style: none;
@@ -704,7 +712,7 @@ ul.nav-li{display: inline-table; margin: 0px auto!important;}
 .nav-li > li {
     float: left;
 text-align: center;
-padding: 0px 0.5em 0px 0.2em;
+padding: 0px 0.5em 0px 0.5em;
 border-right: 1px solid #3c3c3c;
 }
 .nav-li > li > .parent {

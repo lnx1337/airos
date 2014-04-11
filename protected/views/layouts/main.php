@@ -1,14 +1,18 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Aceros Soria</title>
+<title>Aceros Soria SA de CV :: La Fortaleza de un gran Servicio</title>
+<META NAME="description" CONTENT="Aceros Soria venta de materiales de acero, piezas de acero, accesorios, ferretería, materiales para construcción y mucho más.">
+<META NAME="keywords" CONTENT="aceros soria, soria, figueroa, aceros, varillas, acero, paneles, panel w, tablaroca, perfiles, ptr, tubos, herreria, metales, construccion, materiales, material de metal, flecha perfiles, ptr, fierro, placa, lamina, tuberias, tuberia, pvc, galvanizado, tornillos, tuercas, cobre, canal, irving, viga, vigas, tubos de metal, tubos de cobre, iztapalapa, aceros iztapalapa, df, envios de acero mexico, envios gratis, acero barato, acero gratis, ventas de acero, chatarra, metales pesados, plomeria, soldadura, mascarillas, segurindad, industria, ladrillos, plastico granulado,pasamanos, soleras, perforada, tee, fierro estructural, canal,pintado perfil, estructural, zintro, placas, placa,plana, laminas pintro, acanalada, lamina, galvanizada,policarbonato, mallas, tiras, tableros, rejas, paneles de metal, mosquiteros">
+<META NAME="robot" CONTENT="index,follow">
+<META NAME="copyright" CONTENT="Copyright © 2014 Aceros Soria SA de CV. ">
+<META NAME="author" CONTENT="Alonso Caballero  // Jair Peña">
+<META NAME="language" CONTENT="es">
+<META NAME="revisit-after" CONTENT="2">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="Gilberto Alonso Caballero Trujano">
     
 	<!-- Stylesheets -->
 
@@ -30,6 +34,16 @@ $(document).ready(function(){
 	});
 });
  </script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48737916-1', 'acerossoria.com');
+  ga('send', 'pageview');
+
+</script>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
   
 </head>
